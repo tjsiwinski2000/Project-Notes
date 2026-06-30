@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    
+    <button id="myButton">
+      <img id="buttonImage" src=".\\images\\white-pawn.jpg" alt="Button Image">
+  </button>
+
+
+
+    <script>
+      // chatgpt PROVIDED to change images
+      function changeButtonImage() {
+          var buttonImage = document.getElementById("buttonImage");
+            buttonImage.src = '.\\images\\black-pawn.jpg';  // Replace with the new image source
+      }
+
+      // Example usage: Call this function when a click event happens
+      document.getElementById("myButton").onclick = changeButtonImage;
+      
+    </script>
+  </body>
+</html>

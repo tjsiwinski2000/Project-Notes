@@ -1,0 +1,51 @@
+Test in POSTMAN
+endpoint staticMailer.js: [https://q2sgya0e0g.execute-api.us-east-1.amazonaws.com/dev/static-Mailer]
+ JSON body 
+{
+  "email": "tjcloud1965@yahoo.com",
+  "name" : "TJS",
+  "message":"Can you subscribe me please"
+}
+RESULT
+- creates entry dynamoTable
+- didn't send email
+- subscribed tjcloud1965@yahoo.com manually in SNS 
+-  publish message in SNS console DID get sent to tjcloud1965
+====================================
+Lecture.83
+BUILD FRONT-END
+-npx create-next-app quotes-site --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/learn-starter"
+-NOTE: master-> main ; URL was outdated, thanks chatgpt :-)  
+
+-AXIOS 
+final-daily-inspiration-node\front-end\quotes-site\node_modules didn't have axios 
+npm install axios
+
+sls deploy failed
+[error] Resource handler returned message: "Unzipped size must be smaller than 262144000 bytes 
+-- maybe benign error local execution worrked
+
+This line needs replacement
+"https://502b9fki3l.execute-api.us-east-1.amazonaws.com/dev/quotes"
+ with https://q2sgya0e0g.execute-api.us-east-1.amazonaws.com/dev/quotes
+
+ACTION TAKEN
+-replace front-end\quotes-site\index.js with index.js provided by [course content]
+
+WHERE ARE WE
+- http://localhost:3000/ working
+- can send email to all subscribers thr. the http://localhost:3000/ website
+
+OVERALL
+- Got the essentails part of the lab functional
+- Part-1. Basic serverless Express.js application connected to an AWS DynamoDB table to manage users.
+- Create site run on local [laptop]
+
+[..\quotes-site\pages\index.js] fetches a random inspirational quote from an API, displays it, and has a form that submits data to another API endpoint to send a message to mulitple subscribed users. 
+- Some issues arose for AWS SDK for javascript.v2 and  I didn't want to get involved with sendgrid api etc..
+
+OPENS UP POTENTIAL OF WHATS POSSIBLE
+
+https://github.com/serverless/examples
+https://github.com/serverless/examples#community-examples
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 0321-2025 practice doing this from memory TJS -->
+<html>
+  <head>
+    <title>TJ Practice</title>
+    <style>
+      
+      body {
+        font-family: Arial;
+      } 
+
+      .button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .is-toggled {
+        background-color:black;
+        color: white;
+      }
+ 
+    </style>
+  </head>
+
+  <body>
+    <p>Buttons</p>
+    <button onclick="Toggle('.js-button1');" class="js-button1">
+      Music
+    </button>
+
+    <button onclick="Toggle('.js-button2');" class="js-button2">
+      Dance
+    </button>
+
+    <button onclick="Toggle('.js-button3');" class="js-button3">
+      MonkeyMeat
+    </button>
+    <script>
+      function Toggle(sender) {
+        const buttonElement = document.querySelector(sender);
+        if (!buttonElement.classList.contains('is-toggled') ){
+          buttonElement.classList.add('is-toggled')
+        }
+        else {
+          buttonElement.classList.remove('is-toggled')
+        }
+       
+      } //toggle
+
+
+    </script>
+  </body>
+</html>

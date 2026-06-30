@@ -1,0 +1,26 @@
+On a LAMP stack (Linux, Apache, MySQL, PHP), you should name your PHP script with the `.php` file extension for it to be recognized and executed by the Apache server. For example:
+
+- `display_images.php`
+- `index.php` (if you want it to be the default page loaded when accessing a directory)
+- `gallery.php`
+
+### Steps to run your PHP script:
+
+1. **Create the PHP file**: Save your PHP script with the `.php` extension (e.g., `display_images.php`).
+
+2. **Place the file in the appropriate directory**: 
+   - Put your PHP file in the `htdocs` directory (or `www` directory, depending on your setup). The default path for `htdocs` is usually `/var/www/html/` for LAMP.
+   - Example: `/var/www/html/display_images.php`
+
+3. **Permissions**: Ensure that the Apache server has read permissions for the directory and the file. You can adjust the permissions with the following command:
+   ```bash
+   sudo chmod -R 755 /var/www/html
+   ```
+
+4. **Access the file via a browser**:
+   - If your server is running locally, go to `http://localhost/display_images.php`.
+   - If you're using a domain name, go to `http://your-domain.com/display_images.php`.
+
+If everything is set up correctly, the PHP script should run and display the images as intended.
+
+Let me know if you need further help with the setup!

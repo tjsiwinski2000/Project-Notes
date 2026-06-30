@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      const now = new Date();
+
+      const date = now.toLocaleDateString();
+      const time = now.toLocaleTimeString();
+      const currentHour = now.getHours();
+      
+      name='TJ Siwinski';
+
+      if ((currentHour >=6) && (currentHour <=12)){
+        console.log('Good Morning');
+      }else if ((currentHour >=13) && (currentHour <=17)){
+        console.log(`Good Afternoon ${name}`);
+      } else (console.log('Good night!'))
+
+      console.log(currentHour);
+      console.log("Date:", date);
+      console.log("Time:", time);
+
+      console.log("Full date and time:", now.toLocaleString());
+    </script>
+  </body>
+</html>

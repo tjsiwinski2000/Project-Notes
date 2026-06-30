@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To the Power of Chess!</title>
+    <!-- Styling for the client UI -->
+    <style>
+    h1 {
+        color: #FFFFFF;
+        font-family: system-ui;
+		margin-left: 20px;
+        }
+	body {
+        background-color: #222629;
+        }
+    label {
+        color: #86C232;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+		margin-top: 20px;
+        }
+     button {
+        background-color: #86C232;
+		border-color: #86C232;
+		color: #FFFFFF;
+        font-family: system-ui;
+        font-size: 20px;
+		font-weight: bold;
+        margin-left: 30px;
+		margin-top: 20px;
+		width: 140px;
+        }
+	 input {
+        color: #222629;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 10px;
+		margin-top: 20px;
+		width: 1000px;
+        }
+    js-show-output {
+        color: white;
+        font-family: system-ui;
+        font-size: 20px;
+        }
+
+    </style>
+    <script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI = (base,exponent)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://t9736evaei.execute-api.us-west-1.amazonaws.com/DEV", requestOptions)
+            .then(response => response.text())
+            .then(result => displayAPIoutput(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+
+        function displayAPIoutput(apiInput){
+            console.log(apiInput);
+            //let s = JSON.stringify(apiInput);
+            let s=apiInput;
+            let completeOutput="";
+            for (const property in s) {
+                completeOutput += `${property}: ${s[property]} <br>`
+             }
+
+            document.querySelector('.js-show-output').innerHTML=completeOutput;
+            // 4:55pm 0503-2025 this worked in console, need change FONT,FONT color, accumlator
+            // for (const [key, value] of Object.entries(s)) {
+            // console.log(`${key}: ${value}`);
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>TO THE POWER OF CHESS! 05052025</h1>
+	<form>
+        <label>Enter FEN:</label>
+        <input type="text" id="base" size="10000"><br>
+        <label>not used:</label> 
+        <input type="text" id="exponent"> <br>
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <button type="button" onclick="callAPI(document.getElementById('base').value,document.getElementById('exponent').value)">CALCULATE</button><br>
+        <label  class="js-show-output" ></label>
+        
+    </form>
+</body>
+</html>

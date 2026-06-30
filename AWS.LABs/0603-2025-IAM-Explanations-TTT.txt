@@ -1,0 +1,49 @@
+ROLE
+- similar to a user (identity with permissions)
+- does NOT have credentials (password or keys)
+- assumable, temporarily by anyone / anything who needs it
+
+ROLE prevents the need to hard code credentials into an application
+- e.g. create an EC2 instance assign it a role
+- an IAM role automatically deploys AWS credentials to the resources [that assume it]
+- configure instance [assign role]
+
+     _____
+    /     \
+   /_______\
+   | _____ |
+   ||     ||   <-- Hard Hat = ROLE
+   ||_____||
+     / | \
+    /  |  \
+      / \
+     /   \    
+    /     \
+   /       \
+  O         O  
+  ===============
+  PBeasley example
+  - logged in 
+  - no access 
+  - password: Abag1914@718
+  - added her to group TESTERS, attached policy [AmazonS3FullAccess] to TESTERS , now she can see S3 buckets
+
+  POLICY
+  - JSON : effect : action : resourc (ARN) : condition 
+  - Allows IAM users to rotate their own credentials programmatically and in console.
+  - Allow Lambda function access to dynamo db
+  - Allow users start / stop EC2 instance
+  - To take effect attach the policy to one of your identities [USER, GROUP, ROLE]
+
+IAM
+- policies
+- find policy e.g. Administrator access
+- can search and add multiple policies same screen
+- [JSON] view - shows JSON document that provides access
+- [SUMMARY] shows various permission by entity
+
+ROLE
+- common use cases EC2 Lambda
+- Example EC2 needs access to S3 and CloudWatch
+- temporarily assume permissions w/o needing credentials
+

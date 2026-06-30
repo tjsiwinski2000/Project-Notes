@@ -1,0 +1,62 @@
+#run js at command line
+PS C:\Users\TJ\source\repos\Project-Notes\AWS-CardMatch-02102025> node
+Welcome to Node.js v22.13.1.
+Type ".help" for more information.
+> 2+4
+
+#EC2 - show public keys
+sudo cat ~/.ssh/authorized_keys
+sudo vi ~/.ssh/authorized_keys
+
+#on laptop show public keys associated with a key-pair
+aws ec2 describe-key-pairs --key-pair-ids key-0bd5073d9009a0ff9 --include-public-key
+
+#SSH on laptop 
+downloads>ssh -i .\ %name%.pem ec2-user@%ip%
+
+ssh -i .\12082024.pem ec2-user@54.215.235.206
+
+#01-18-2025-Powershell, JSON parsing, AWS commands
+$s=aws ec2 describe-key-pairs
+$s = $s|ConvertFrom-Json
+foreach ($item in $s.KeyPairs){write-host $item.KeyPairId $item.KeyName}
+key-0ae3b2e364c46e95b mykp
+key-010bb4ba20ad4a627 win01-17-2025
+key-03aebf975916b8146 01-17-2025-KP
+
+aws ec2 run-instances --image-id ami-061ad72bc140532fd --count 1 --instance-type t2.micro 
+                      --key-name <Keypair-name> --security-group-ids <SecurityGroupId> 
+                      --subnet-id <SubnetId>
+
+#delete bucket
+aws s3 rb s3://093025-sec-bucket --force
+
+aws s3 rb s3://aws-cloudtrail-logs-396913707603-6449f0f0 --force
+=================================================
+#delete POM via cmd line (some work, some not) 1128
+aws lambda delete-function --function-name 1222-2025 --region us-west-1
+aws apigateway delete-rest-api --rest-api-id 37t94ob8c5 --region us-west-1
+aws dynamodb delete-table --table-name 1222-2025 --region us-west-1
+aws amplify delete-app --app-id d3jhxxrgry402b --region us-west-1
+
+aws iam detach-role-policy  --role-name 11128-role-7u9y5z3   --policy-arn arn:aws:iam::396913707603:role/service-role/1128-role-7u9y5z3i
+( there's a lot to this ^ ) 
+-- each cmd line below gives value for the next command below it ---
+aws iam list-attached-role-policies --role-name 11128-role-7u9y5z3
+aws iam detach-role-policy --role-name 11128-role-7u9y5z3 --policy-arn arn:aws:iam::396913707603:role/service-role/1128-role-7u9y5z3i
+aws iam list-role-policies --role-name 11128-role-7u9y5z3
+aws iam delete-role-policy --role-name 11128-role-7u9y5z3 --policy-name 1126
+aws iam list-instance-profiles-for-role --role-name 11128-role-7u9y5z3
+aws iam remove-role-from-instance-profile --instance-profile-name <instance-profile-name> --role-name 11126-role-ha5pqz51
+aws iam delete-role --role-name 11128-role-7u9y5z3
+==================================================
+
+# BUILD HTML ZIP FOR AMPLIFY 
+remove-item index.zip                                           
+compress-archive -path .\index.html -DestinationPath .\index.zip        
+==================================================
+# FIND INSTANCE RUNNING IN A REGION cmd-line 1226-2025
+aws ec2 describe-instances --region ap-northeast-2
+
+
+

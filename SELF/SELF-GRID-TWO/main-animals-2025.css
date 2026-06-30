@@ -1,0 +1,131 @@
+h1 {
+  color: #e61212;
+  font-family: system-ui;
+margin-left: 20px;
+  }
+h2 {
+  color: #230a5f;
+  font-family: system-ui;
+  margin-left: 20px;
+  }
+body {
+  background-color: #f3f5f7;
+  }
+label {
+  color: #86C232;
+  font-family: system-ui;
+  font-size: 15px;
+  margin-left: 20px;
+margin-top: 20px;
+  }
+button {
+  background-color: #86C232;
+  border-color: #86C232;
+  color: #FFFFFF;
+  font-family: system-ui;
+  font-size: 15px;
+font-weight: bold;
+  margin-left: 30px;
+margin-top: 20px;
+width: 140px;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+  }
+input {
+  font-family: system-ui;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 20px;
+  }
+.myimage {
+    width: 300px;
+    height: 200px;
+  }
+  /*below definition provide mouse over zoom effects
+   .zoom-container {
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    border: 2px solid #ccc;
+    position: relative;
+  }
+
+  .zoomimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .zoom-container:hover .zoomimg {
+    transform: scale(1.8); /* Zoom level 
+  } */
+
+  .zoom-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+  .zoom-link {
+    display: inline-block;
+    padding: .5rem .75rem;
+    border-radius: .75rem;
+    background: #f3f4f6;
+    text-decoration: none;
+    color: #111;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .zoom-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+  }
+
+  body {
+    margin: 0; /* Important: removes default margin */
+    font-family: sans-serif;
+    color: black
+}
+
+.split-container {
+    display: flex; /* This is the key property */
+    height: 100vh; /* Optional: Makes the container full height of the viewport */
+}
+
+.left-section,
+.right-section {
+    flex: 1; /* This makes both sections take up equal width (50/50) */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.left-section {
+    background-color: #f4f4f4;
+}
+
+.right-section {
+    background-color: #e9e9e9;
+    font-size: 30;
+}
+
+.full-width-textarea {
+  width: 70%;
+}
+
+.oval-button {
+  background-color: rgb(255,216,20);
+  border: none;
+  padding: 5px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: black
+}
+
+.oval-button2 {
+  background-color: #86C232;;
+  border: none;
+  padding: 5px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white
+}

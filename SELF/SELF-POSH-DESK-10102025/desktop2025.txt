@@ -1,0 +1,22 @@
+﻿212Appl3-jo@@y1965
+C:\Users\TJ\AppData\Roaming\Python\Python313\Scripts\cli-chess.exe
+python C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course\09_Hacker_Rank\0120-2026-timer.py
+tjsiwinski_2000@yahoo.com
+python C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course\do_daily.py
+https://www.linkedin.com/in/tj-siwinski-37703014/
+#suggestion
+tjcloud1965@yahoo.com
+tjsiwinski2000
+Remove-Item .\index.zip;Compress-Archive -Path  .\index.html, .\main-animals-2025.css, .\retrieve-all-records.js, .\mammal.html, .\reptile.html, .\bird.html, .\fish.html, .\add-edit-form-engine.js, .\page-load-index.js, .\page-load-genre.js -DestinationPath  index.zip
+ssh -i .\08212025kp.pem ec2-user@54.176.109.45
+07/01/1983
+05/27/1987
+Michael Ballew
+Thaddeus Siwinski
+Jacob Divan
+aws iam list-users
+Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 5 | Format-Table ID, ProcessName, WorkingSet -AutoSize
+[byte][char]'a'
+ c:\users\tj\appdata\roaming\python\python313\scripts\cli-chess.exe
+Thousand Oaks Body of Elders
+** Please do not reply to this e-mail **

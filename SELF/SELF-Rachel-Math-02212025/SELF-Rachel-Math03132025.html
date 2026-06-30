@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>03-13-2025</title>
+    <style>
+    input:invalid {
+      border: 2px dashed red;
+    }
+    
+    input:invalid:required {
+      border: 2px dashed red;
+    }
+    
+    input:valid {
+      background-color: rgb(160, 210, 160);
+    }
+  </style>
+  </head>
+
+  <body>
+    <input type="text" class="input-field-1" placeholder="Input 1" required pattern="12"><br>
+    <input type="text" class="input-field-2" placeholder="Input 2" required pattern="15">
+ </body>
+
+ <script>
+    // 0313-2025 Form with several [ <input> ]
+    //           goal return the value in the field compare to another naumber 
+    
+    // set up a listener for an entire form
+    const inputFields = document.querySelectorAll('input[type="text"]');
+    // return value of whats in the form
+    inputFields.forEach(input => {
+    input.addEventListener('input', function() {
+      myFunction(this.className,event);
+          //console.log(this.textContent);
+      //console.log(`from Listener ${this.className}`);
+      // line below doesnt work 0313-2025 8:00pm
+      //if (event.key == 'Enter'){}
+
+        const s='.' + this.className
+        const nameElement=document.querySelector(s);
+        let name=nameElement.value;
+        console.log(`from Listener ${this.className} value ${name}`)
+      });
+    });
+    
+
+    function myFunction(className) {
+      console.log(`Input changed in element with class: ${className}`);
+      //console.log(`${className}`)
+   
+      // Perform actions based on the class name
+   }
+
+ </script>

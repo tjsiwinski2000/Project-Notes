@@ -1,0 +1,17 @@
+[Environment Variables in serverless.yml]
+provider:
+  name: aws
+  ...
+  environment:
+    THUMBNAIL_SIZE: 128
+    REGION_NAME: ${self:provider.region}
+    DYNAMODB_TABLE: ${self:custom.dynamoTable}
+-----------------------------------------------
+[Can be *invoked* in handler.py]
+from datetime import datetime
+...
+import json
+
+s3 = boto3.client('s3')
+size = int(os.environ['THUMBNAIL_SIZE'])
+dbtable = str(os.environ['DYNAMODB_TABLE'])

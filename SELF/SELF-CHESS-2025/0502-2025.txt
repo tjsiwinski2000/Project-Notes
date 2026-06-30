@@ -1,0 +1,109 @@
+0502-2025
+- create chess-lambda.py
+-        chess-lambda-v2.py
+
+
+
+    Directory: C:\Users\TJ\source\repos\Project-Notes\PythonTesting
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          5/2/2025   3:08 PM                package
+-a----          5/2/2025   2:57 PM           1130 chess-lambda-v2.py
+-a----          5/2/2025   2:35 PM           1106 chess-lambda.py
+-a----          5/1/2025   5:30 PM            994 chess.py
+-a----         3/14/2025   3:50 PM           1250 random_math_problems.py
+-a----         2/25/2025   1:53 PM           1267 random_math_problem_lambda - Copy.py
+-a----         3/15/2025   2:50 PM           1391 random_math_problem_lambda.py
+-a----          5/2/2025   3:08 PM              8 requirements.txt
+
+Referencing 
+https://stackoverflow.com/questions/46991117/aws-python-lambda-functionno-module-named-requests
+
+Basically [guessing]
+1. need to zip chess-lambda (which references response lib) and "package" above
+2. zip file needs to uploaded via (Upload from) on 
+- https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/functions/chess-0502-2025?newFunction=true&subtab=tags&tab=code
+=========================
+545pm
+- chess-lambda-v3.py [chatgpt]
+- (/) works as lambda function
+passed below as FEN:
+"8/1P1R4/n1r2B2/3Pp3/1k4P1/6K1/Bppr1P2/2q5 w - - 0 1"
+ rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - - 0 1
+ 
+FEN Viewer: https://www.redhotpawn.com/chess/chess-fen-viewer.php
+was helpful
+
+0503-2025
+s={
+  "text": "Move d5 → f5 (Rf5+): [6.68]. White is winning. Depth 12.",
+  "captured": false,
+  "promotion": false,
+  "isCapture": false,
+  "isPromotion": false,
+  "isCastling": false,
+  "fen": "5k2/ppp5/4P3/3R3p/6P1/1K2Nr2/PP3P2/8 w - - 1 32",
+  "type": "bestmove",
+  "depth": 12,
+  "move": "d5f5",
+  "eval": 6.68,
+  "centipawns": "668",
+  "mate": null,
+  "continuationArr": [
+    "f3f5",
+    "e3f5",
+    "h5h4",
+    "f5h4",
+    "f8e7",
+    "b3c4",
+    "e7e6",
+    "f2f4",
+    "b7b6",
+    "h4f3",
+    "c7c5",
+    "f4f5",
+    "e6f6",
+    "c4d5",
+    "f6e7",
+    "f3d2",
+    "e7f8"
+  ],
+  "debug": "info depth 12 seldepth 25 multipv 1 score cp 668 nodes 294654 nps 58930800 hashfull 23 tbhits 0 time 5 pv d5f5 f3f5 e3f5 h5h4 f5h4 f8e7 b3c4 e7e6 f2f4 b7b6 h4f3 c7c5 f4f5 e6f6 c4d5 f6e7 f3d2 e7f8",
+  "winChance": 92.12627874683679,
+  "taskId": "xuh4li2ba",
+  "turn": "w",
+  "color": "w",
+  "piece": "r",
+  "from": "d5",
+  "to": "f5",
+  "san": "Rf5+",
+  "flags": "n",
+  "lan": "d5f5",
+  "fromNumeric": "45",
+  "toNumeric": "65",
+  "continuation": [
+    {
+      "from": "f3",
+      "to": "f5",
+      "fromNumeric": "63",
+      "toNumeric": "65"
+    },
+    {
+      "from": "e3",
+      "to": "f5",
+      "fromNumeric": "53",
+      "toNumeric": "65"
+    }
+  ]
+}
+
+typeof s
+'object'
+
+NEXT how to dump the object in Key Value Pairs
+450pm
+for (const [key, value] of Object.entries(s)) {
+  console.log(`${key}: ${value}`);
+}

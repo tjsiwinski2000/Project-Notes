@@ -1,0 +1,18 @@
+VIDEO: https://www.youtube.com/watch?v=eaicwmnSdCs
+
+VPC
+- virtual network that is logically isolated in AWS
+
+SPOT INSTANCES
+- bid how much 
+
+STOP
+- EBS remains
+- most cases STOP best
+
+TERMINATE
+- EBS is lost 
+
+Windows Server Password
+- 4 minute wait time after EC2 started
+- (CONNECT) Button -> get windows password -> requires upload of PEM file

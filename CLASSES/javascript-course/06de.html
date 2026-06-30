@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      const now = new Date();
+
+      const date = now.toLocaleDateString();
+      const time = now.toLocaleTimeString();
+      const currentHour = now.getHours();
+      
+      const age =6;
+      const notHoliday=false
+      //if (holiday === false){
+        if (notHoliday && ((age <=6) || (age >=65))){
+        console.log('Discount');
+        } else (console.log('No Discount'))
+  
+
+
+      console.log(currentHour);
+      console.log("Date:", date);
+      console.log("Time:", time);
+
+      console.log("Full date and time:", now.toLocaleString());
+    </script>
+  </body>
+</html>

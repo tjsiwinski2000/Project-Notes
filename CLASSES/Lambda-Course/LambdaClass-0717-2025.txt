@@ -1,0 +1,19 @@
+staticMailer.js
+- got all MONKED with the closing {} , () , ";" etc.
+- TODO review code perhaps with AI assistance
+
+endpoint staticMailer.js
+ - https://q2sgya0e0g.execute-api.us-east-1.amazonaws.com/dev/static-Mailer
+ - (/) POSTMAN
+ - (x) send email (/) made entry in dynamoTable
+ - JSON body {
+  "email": "tjcloud1965@yahoo.com",
+  "name" : "TJS",
+  "message":"Can you subscribe me please"
+}
+- TODO  work thr. email issue 
+IS THERE A MANUAL STEP REQUIRED?
+Message: Can you subscribe me please
+Name: TJS
+Email: tjcloud1965@yahoo.com
+Service information: 54.86.50.139 - PostmanRuntime/7.44.1

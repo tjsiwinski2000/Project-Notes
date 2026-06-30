@@ -1,0 +1,75 @@
+Lesson 61 
+==========================================
+Handler.js not created
+
+- i'm using serverless to build a AWS Node.js Express API with DynamoDB but handler.js wasn't created 
+[ChatGPT]
+If you're using serverless create --template aws-nodejs or a similar command, Serverless doesn’t generate a handler.js for Express automatically. Instead, it provides a boilerplate function. When you integrate Express, you typically create handler.js (or another file like app.js) yourself to wrap Express in Lambda.
+==========================================
+==========================================
+NODE PROJECT TIP
+C:\Users\..>npm install
+- this command install dependencies 
+- you can see update in package.json in [real-time]
+
+LAUNCH VSCODIUM AT CMD LINE
+- codium .\%file%
+  npm install aws-sdk
+  Even though AWS provides aws-sdk in the Lambda runtime in the cloud, it’s not installed locally by default.
+  NOTE: package.json automatically updated with     ["aws-sdk": "^2.1692.0"]
+==========================================
+==========================================
+ERRORs that took TJ for a ride
+
+serverless
+function:
+  %function-name%
+
+handler.js
+  %function-name-monkey-meat% 
+
+ %function-name% => %function-name-monkey-meat% 
+-%function-name% is the name that maps to handler, do NOT USE  %function-name-monkey-meat% 
+-sls invoke local --function %function-name%
+
+==========================================
+[this is correct]
+functions:
+  create:
+    handler: handler/createTodo.createTodo
+    events:
+      - http: 
+          path: todoos
+          method: post
+          cors: true 
+
+==========================================
+=5:00pm error needs to be addressed= still in Lesson62
+"errorType": "SyntaxError",
+  "errorMessage": "Unexpected token u in JSON at position 0",
+  "trace": [
+    "SyntaxError: Unexpected token u in JSON at position 0",
+    "    at JSON.parse (<anonymous>)",
+    "    at module.exports.createTodo (/var/task/handler/createTodo.js:9:23)",
+    "    at /var/task/serverless_sdk/index.js:24:10381",
+    "    at /opt/sls-sdk-node/wrapper.js:13368:92",
+
+[ChatGPT]
+"errorMessage": "Unexpected token u in JSON at position 0"
+means that your code tried to JSON.parse() something, but the input was undefined, and JSON.parse(undefined) throws that exact error.
+// from handler.py ->current_timestamp = datetime.now().isoformat()
+
+//0628-2025 Testing createTodo.js
+const s=JSON.stringify(event, null, 2)
+console.log("EVENT:", s.body);  => undefind error 
+
+const s=JSON.stringify(event, null, 2)
+console.log("EVENT:", s.todo); => undefind error
+
+const s=(event, null, 2)
+console.log("EVENT:", s.todo);=> undefind error
+
+const s=JSON.stringify(event, null, 2)
+console.log("EVENT1:", s)
+const t= JSON.parse(s);
+console.log("EVENT2:", t.todo); // this works for some insane sadistic reason that I wll never understand.

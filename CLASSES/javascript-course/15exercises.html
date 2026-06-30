@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  
+  <body>
+    TJ was here
+    <div class="exercise"></div>
+  </body> 
+
+</html>
+
+<script type = "module">
+import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+const today = dayjs();
+
+let report ="";
+const deliveryDate = today.add( 5, 'days' );
+report += `15a    ${deliveryDate.format('MMM d')} <br>`;
+const deliveryDate2 = (today.add( 1, 'month' )).format('MMM d');
+report += `15b    ${deliveryDate2} <br>`;
+const deliveryDate3 = (today.subtract(1, 'month')).format('MMM d');
+report += `15c    ${deliveryDate3} <br>`;
+const deliveryDate4 = (today.format('dddd'));
+report += `15d    ${deliveryDate4} <br>`;
+
+console.log(deliveryDate2);
+console.log(deliveryDate3);
+
+const dateString = deliveryDate.format('MMM d');
+
+document.querySelector('.exercise').innerHTML=report;
+console.log(report);
+
+console.log(`${deliveryDate} : ${IsWeekend(deliveryDate)}`);
+console.log(`${deliveryDate2} : ${IsWeekend(today)}`);
+console.log(`${deliveryDate3} : ${IsWeekend(today.add(1, 'days'))}`);
+
+function IsWeekend(d){
+  let dateIn_Day;
+  dateIn_Day=d.format('dddd');
+  console.log (dateIn_Day);
+  if ( (dateIn_Day === 'Saturday') || (dateIn_Day === 'Sunday' )){
+    return true;
+  } else {
+    return false;
+  }
+}
+</script>
+

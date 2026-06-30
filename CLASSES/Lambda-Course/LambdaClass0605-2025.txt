@@ -1,0 +1,12 @@
+sam build         
+sam local invoke 
+sam deploy --guided  
+              
+curl https://v09zlcydra.execute-api.us-west-1.amazonaws.com/Prod/hello/
+sam local start-api                
+Browser [http://127.0.0.1:3000/hello]
+
+sam local invoke "HelloWorldFunction" -e events/event.json             
+
+aws cloudformation delete-stack --stack-name sam-app --region us-west-1
+   └───────────────────────────────────────────────────────────────────────────

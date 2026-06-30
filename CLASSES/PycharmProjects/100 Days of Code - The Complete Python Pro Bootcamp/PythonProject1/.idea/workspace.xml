@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3cd29450-552e-4f06-b9af-53989d564432" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../2025-Diary-Me.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../2025-Diary-Me.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../AWS.LABs/codepipeline-s3-game" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../AWS.LABs/codepipeline-s3-game" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day54-FLASK/higher-lower/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day54-FLASK/higher-lower/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/templates/me.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Day54-FLASK/my-personal-site/templates/me.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/agify.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/agify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Day57-Jinja-Flask/website/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Python-Crash-Course/05_Projects/Calendar_11115-2025.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Python-Crash-Course/12312025-squ.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Python-Crash-Course/do_daily.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Python-Crash-Course/do_daily.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Python-Crash-Course/review-list.txt.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="38Uj0H1tBBa5cEqEtxMPUwqZSHY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-8753aad8314d-d902c0275401-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cd29450-552e-4f06-b9af-53989d564432" name="Changes" comment="" />
+      <created>1768860818674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768860818674</updated>
+    </task>
+    <servers />
+  </component>
+</project>

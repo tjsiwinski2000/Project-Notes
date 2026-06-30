@@ -1,0 +1,12 @@
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\bin\Debug\SportsScores.exe.config
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\bin\Debug\SportsScores.exe
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\bin\Debug\SportsScores.pdb
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\bin\Debug\SportsScores.xml
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.vbproj.AssemblyReference.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.Form1.resources
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.Resources.resources
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.vbproj.GenerateResource.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.vbproj.CoreCompileInputs.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.exe
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.xml
+C:\Users\TJ\source\repos\Project-Notes\SELF\SportsScores\obj\Debug\SportsScores.pdb

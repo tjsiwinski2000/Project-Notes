@@ -1,0 +1,5 @@
+ERROR
+- Stack aws-sam-cli-managed-default exists, but the ManagedStackSource tag is missing. Failing as the stack was likely not created by the AWS SAM CLI.
+
+RESOLUTION
+- Open up CloudFormation in AWS and delete the aws-sam-cli-managed-default stack then try to redeploy. Every time your deploy fails you'll likely have to do this ...

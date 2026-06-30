@@ -1,0 +1,31 @@
+Deploying 0450pm 0625-2025
+FROM:C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\aws-python-http-api>
+sls deploy 
+OUTPUT:
+endpoints:                                                                                                 
+  POST - https://xha6wnsrp2.execute-api.us-east-1.amazonaws.com/dev/posts/create
+  GET - https://xha6wnsrp2.execute-api.us-east-1.amazonaws.com/dev/posts/get/{postId}
+  GET - https://xha6wnsrp2.execute-api.us-east-1.amazonaws.com/dev/posts/all
+  PUT - https://xha6wnsrp2.execute-api.us-east-1.amazonaws.com/dev/posts/update/{postId}
+  DELETE - https://xha6wnsrp2.execute-api.us-east-1.amazonaws.com/dev/posts/delete/{postId}
+functions:
+  create: aws-python-http-api-project-dev-creat(33kB)                                                      
+  get: aws-python-http-api-project-dev-get (33 kB)
+  all: aws-python-http-api-project-dev-all (33 kB)
+  update: aws-python-http-api-project-dev-update (33 kB)
+  delete: aws-python-http-api-project-dev-delete (33 kB)
+
+  aws-python-http-api-project-dev-create
+  -add KLayer for PIL [create, get]
+    -(/) added data via API and WebUI via create
+    -(/) used [get] via endpoint and API to return specific record
+    -(/) used [get] ALL via endpoint
+    -(/) used [delete] via API 
+    -(/) used [delete] via POSTMAN (didn't need accesskey)
+    -(/) used [update] for specific record id
+
+    -(/) used accesskey and super-accesskey for my account for POSTMAN [create]
+    0922-2025 AWS found access key in git
+    disabled my account [basically] <%removed from this document%>
+ 
+   - deactivated after use 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <svg id="hangman-svg" viewBox="0 0 200 240" width="200" height="240"></svg>
+  <div id="word-display"></div>
+  <div id="letters"></div>
+  <div id="message"></div>
+
+  <script>
+    const WORD = "{{ word|upper }}";
+  </script>
+  <script src="./hangman.js"></script>
+</body>
+</html>

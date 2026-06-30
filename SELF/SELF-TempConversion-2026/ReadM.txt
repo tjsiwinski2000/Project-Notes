@@ -1,0 +1,20 @@
+0119-2026
+
+Temperature converter for Don (Monique beau)
+
+Region
+- us-east-1
+
+Amplify
+- https://us-east-1.console.aws.amazon.com/amplify/apps/d3aoovhd8mbvo0/overview
+
+Lambda
+- https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/0119-2026-temp-conversion
+
+API
+- https://us-east-1.console.aws.amazon.com/apigateway/main/apis/l10oonheo1/resources?api=l10oonheo1&experience=rest&region=us-east-1
+
+URL
+-click - > https://tinyurl.com/don1914
+
+or try ->  https://staging.d3aoovhd8mbvo0.amplifyapp.com/

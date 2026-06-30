@@ -1,0 +1,54 @@
+<html>
+<head>
+
+  <style>
+    .amazon-button {
+      background-color: rgb(255, 216,20);
+      border: none;
+      padding: 5px 40px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+
+  <style>
+    .amazon-button2 {
+      background-color: rgb(255, 216,20);
+      border: none;
+      padding: 5px 40px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-button js-button" onclick="
+  toggleButton('.js-button');
+  ">Gaming</button>
+  
+  <button class="toggle-button js-button-2" onclick="
+  toggleButton('.js-button-2');
+  ">Music</button>
+  
+  <button class="toggle-button js-button-3" onclick="
+  toggleButton('.js-button-3');
+  ">Tech</button>
+<p>
+<button class="amazon-button js-button-4" onclick="roundButton('.js-button-4')">Add to Cart</button>
+
+<script>
+  function toggleButton(selector) {
+    alert(selector)
+    const button = document.querySelector(selector);
+    button.innerHTML= "new button text";
+  }
+
+  function roundButton(selector){
+    alert(selector)
+    const button = document.querySelector(selector);
+    button.classList.remove('amazon-button');
+  }
+</script>
+</body>
+</html>

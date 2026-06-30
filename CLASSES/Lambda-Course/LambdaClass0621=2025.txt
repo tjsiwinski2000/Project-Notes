@@ -1,0 +1,22 @@
+Re-Deploy [CreateThumbnail] project 
+
+From C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\final-python-thumbnail\
+-sls deploy
+-S3 bucket permissions/edit/ACL enabled
+-S3 bucket BPA off
+-S3 bucket read (\) everyone
+-Lambda function, add layer, (*)ARN , appropriate KLayer [python version, python package]
+
+TEST!
+-adding png should trigger CreateThumbnail
+
+CLEANUP
+-empty bucket
+From C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\final-python-thumbnail\
+-sls remove
+=========================================
+=========================================
+Lesson 58 10:10 
+functions in handler.py => hyperlink to dynamo.py HOW?
+- "python.languageServer": "Jedi" [settings.json]
+- installed open VSX python extension from Extension Marketplace

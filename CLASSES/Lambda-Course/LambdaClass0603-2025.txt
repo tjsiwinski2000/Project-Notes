@@ -1,0 +1,19 @@
+# Welcome to Serverless!
+# Happy Coding!
+
+service: python-0603-2025
+
+frameworkVersion: '3'
+
+# 06032025 give function access to peruse lambda namespace
+provider:
+  name: aws
+  runtime: python3.8
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:*"
+          Resource: 
+            - "*"

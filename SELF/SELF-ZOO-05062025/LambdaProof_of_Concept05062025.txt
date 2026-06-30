@@ -1,0 +1,32 @@
+import json
+import boto3
+from boto3.dynamodb.conditions import Key
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('0502-2025')
+
+def lambda_handler(event, context):
+    # Example: 'pk' comes from the event
+    partition_key_value = event.get('ID')
+    
+    if not partition_key_value:
+        return {
+            'statusCode': 400,
+            'body': json.dumps('Missing partition key')
+        }
+
+    try:
+        response = table.query(
+            KeyConditionExpression=Key('ID').eq('8.0')
+        )
+        items = response.get('Items', [])
+        return {
+            'statusCode': 200,
+            'body': json.dumps(items)
+        }
+
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps(f"Error querying table: {str(e)}")
+        }

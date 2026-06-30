@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TESTING</title>
+  </head>
+
+  <body>
+    <input  class="js-input"; onkeydown="
+        handleCostKeydown(event,5,`${this.name}` )">
+   
+    <script>
+    function handleCostKeydown(event,testNum,sending_element){
+        if (event.key === 'Enter'){
+          alert(sending_element)
+          const inputElement = document.querySelector('.js-input');
+          let inputNumber = Number(inputElement.value );
+          alert(`${inputNumber}, ${testNum}`);
+            if (inputNumber === testNum){
+              alert('equal')
+            } else {
+              alert('notequal')
+            }
+          
+        }  
+      }
+    </script>
+  </body>
+</html>
+
+  

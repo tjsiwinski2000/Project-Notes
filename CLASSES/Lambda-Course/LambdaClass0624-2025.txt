@@ -1,0 +1,22 @@
+=AWS SDK error=
+- AWS SDK not found
+
+[https://github.com/aws-amplify/amplify-cli/issues/13278]
+ From what I've read (https://aws.amazon.com/blogs/compute/node-js-18-x-runtime-now-available-in-aws-lambda/) this is to be expected when switching to node18 as aws-sdk isn't bundled up for node18 as it was for node16.
+ - Changed runtime: nodejs18.x to 16 [serverless.yml] but that didn't resolve likely need full rebuild 
+
+1:30pm
+- npm install @aws-sdk/client-lambda 
+- determine what v. was installed?
+Open your package-lock.json file and search for @aws-sdk/client-lambda. It will show the exact resolved version and where it came from (e.g., npm registry).
+
+1:45pm
+- npm install aws-sdk 
+- ^ this automatically updates package.json
+(/) this resolved the issue
+
+=Formatting and Other Error=
+serverless.yml
+- http: * [removed *] 
+- This fixed the  error
+

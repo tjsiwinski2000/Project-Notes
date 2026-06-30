@@ -1,0 +1,23 @@
+SES Lab : set aside due to email challenges
+
+Lecture.74
+e-mail subscription service 
+Front End -> API->Lambda->S3 sample quote
+                ->Lambda->subscribe => SNS [us!]
+                ->Lambda->pull a random quote from S3 bucket (scheduled from emails)
+SendGrid API -> free service for campaigns
+
+bucket
+- myjsonbucket1961 
+
+ERROR: {"message": "Internal server error"}
+- check console in browser
+- test with management console : API Gateway
+RESOLUTION 
+- three foolish typographical errors
+
+module.exports.getQuotes= (events, context, callback) [(1)event (-s)]
+functions:
+  quotes:
+    handler: handlet/getQuotes.getQuotesr[(2)handler/...(3)getQuotes(-r)]
+   

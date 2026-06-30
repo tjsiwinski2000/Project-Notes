@@ -1,0 +1,18 @@
+ERROR: "Unexpected token o in JSON at position 1"
+
+The error message "Unexpected token o in JSON at position 1" typically means that you are trying to use JSON.parse() on something that is not a valid JSON string, but rather an object that has already been parsed, or a string representation of an object (like "[object Object]").
+
+WAS:  const { to, from, subject, message } = JSON.parse(event.body);
+NOW:  const { to, from, subject, message } = data;
+=============================================
+=============================================
+
+ERROR UnexpectedParameter: Unexpected key 'ToAddress' found in params.Destination...
+Destination: {
+  ToAddress: [to] // <-- Incorrect: Should be [ ToAddresses ]
+},
+
+=============================================
+=============================================
+
+840pm e-mail not sent but no error 

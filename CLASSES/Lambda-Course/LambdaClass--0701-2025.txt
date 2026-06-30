@@ -1,0 +1,27 @@
+GOAL: all scripts working with API,POSTMAN
+(/) - listTodos.js 0630-2025      
+- [RESOLUTION]"body": JSON.stringify(data.Items) POSTMAN needs JSON string 
+
+(/) - getTodo.js 0701-2025        
+- [RESOLUTION] Key : {  userId: event.pathParameters.id} somehow id , userid confusion
+
+(/) - createTodo.js
+const sResponse=JSON.stringify(event, null, 2)
+console.log("SHOW-PAYLOAD:", sResponse)
+const sResponseJSON= JSON.parse(sResponse);
+console.log("SHOW-PAYLOAD-BODY:", sResponseJSON.body);
+const data = JSON.parse(sResponseJSON.body)
+[RESOLUTION] - seems additonal level of JSON parsing required beyond what was provided 
+
+creatTodo.js
+(x)(/) activated access key serverlessadmin in IAM [actually wasn't necessary]
+
+(/) - deleteTodo.js 
+- [RESOLUTION] - no issues , one FYI (below)
+[serverless.yml]
+delete:
+handler: handler/deleteTodo.deleteTodo
+events:
+  - http: 
+      path: delete-todos/{id}
+Not a big issue ^ created this path to differentiate from GET

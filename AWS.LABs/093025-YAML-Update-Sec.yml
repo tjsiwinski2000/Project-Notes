@@ -1,0 +1,19 @@
+{
+  "Resources": {
+    "rLambdaRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        // ... (existing properties)
+      },
+      "DeletionPolicy": "Retain" // <-- ADD THIS LINE
+    },
+    "rConfigEventRule": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        // ... (existing properties)
+      },
+      "DeletionPolicy": "Retain" // <-- ADD THIS LINE
+    }
+    // ... and so on for all resources
+  }
+}

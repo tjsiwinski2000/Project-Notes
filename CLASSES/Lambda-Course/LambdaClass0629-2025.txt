@@ -1,0 +1,61 @@
+Lesson62
+
+FAILING LINE
+const data = JSON.parse(event.body);
+- "errorMessage": "Unexpected token u in JSON at position 0",
+- [ChatGPT]  Code tried to JSON.parse(), but the input was undefined, and JSON.parse(undefined) throws that exact error.
+
+[RESOLUTION]
+const sTemp=JSON.stringify(event, null, 2)
+console.log("EVENT-sTemp:", sTemp)
+const data= JSON.parse(sTemp);
+console.log("EVENT2:", data.todo, data.checked);
+- do in two steps, 1) JSON.stringify input and THEN 2) JSON.parse
+- used two variables for clarity, possibly could have been done in one
+============================================
+============================================
+FAILING LINE
+const params = {
+  TableName: TODO_TABLE,
+  Item: {
+    Id: uuid.v1(), 
+    todo: data.todo,
+    checked: false,
+    createdAt: timestamp,
+    updatedAt: timestamp
+  }
+}
+- "errorMessage" ValidationException: One or more parameter values were invalid: Missing the key userId in the item
+
+[RESOLUTION]
+Item: {
+  userId: uuid.v1(),
+  todo: data.todo,
+  checked: false,
+  createdAt: timestamp,
+  updatedAt: timestamp
+}
+
+============================================
+============================================
+POSTMAN [https://zhyk98bnh9.execute-api.us-east-1.amazonaws.com/dev/todoos]
+
+- "errorMessage" "message": "Internal server error" 501 Bad Gateway
+Responses that are 502 responses will not contain the required CORS headers. This is because a 502 response comes from our Proxy rather than your service. You will need to resolve the issue with your service that caused the 502 response.
+
+When you make the POST request check your service logs for errors. Also, check that your service isn’t going into an Unhealthy status.
+(/) activate serverless admin access key, no impact sso deactivate
+(?) is this a problem with POSTMAN or other issue
+(TBD) try via POSH https://stackoverflow.com/questions/17325293/invoke-webrequest-post-with-parameters
+(/) added access key , secret access key , region , service no impact still error 
+====================================
+===================================
+955pm listTodos.js
+"errorType": "SyntaxError",
+"errorMessage": "Missing initializer in const declaration",
+"trace": [
+  "/var/task/handler/listTodos.js:7",
+  "      const params {",
+  "            ^^^^^^",
+  "",
+  "SyntaxError: Missing initializer in const declaration",

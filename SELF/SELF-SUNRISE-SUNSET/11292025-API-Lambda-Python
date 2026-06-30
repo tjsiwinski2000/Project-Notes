@@ -1,0 +1,62 @@
+import json
+
+import requests
+import logging
+
+# Configure logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+def lambda_handler(event, context):
+    # Example coordinates for London, UK
+    LATITUDE = 29.602400
+    LONGITUDE = -98.393089
+    
+    API_URL = "https://api.sunrise-sunset.org/json"
+    
+    # Define the parameters for the API call
+    params = {
+        'lat': LATITUDE,
+        'lng': LONGITUDE,
+        'formatted': 0, # 0 for ISO 8601 format
+        "tzid" : "America/Chicago"
+    }
+    
+    try:
+        # Make the GET request to the external API
+        response = requests.get(API_URL, params=params)
+        
+        # Raise an exception for bad status codes (4xx or 5xx)
+        response.raise_for_status() 
+        
+        # Parse the JSON response
+        data = response.json()
+        
+        # Log the received data
+        logger.info(f"Successfully fetched sunrise/sunset data: {data}")
+        
+        # Extract the results
+        sunrise_time = data['results']['sunrise']
+        sunset_time = data['results']['sunset']
+        
+        # You can process this data further or return it
+        return {
+            'statusCode': 200,
+            'body': json.dumps({
+                'message': f"Sunrise: {sunrise_time}, Sunset: {sunset_time}",
+                'data': data
+            })
+        }
+        
+    except requests.exceptions.HTTPError as errh:
+        logger.error(f"Http Error: {errh}")
+        return {'statusCode': 400, 'body': json.dumps({'error': str(errh)})}
+    except requests.exceptions.ConnectionError as errc:
+        logger.error(f"Error Connecting: {errc}")
+        return {'statusCode': 500, 'body': json.dumps({'error': str(errc)})}
+    except requests.exceptions.Timeout as errt:
+        logger.error(f"Timeout Error: {errt}")
+        return {'statusCode': 500, 'body': json.dumps({'error': str(errt)})}
+    except requests.exceptions.RequestException as e:
+        logger.error(f"An unexpected error occurred: {e}")
+        return {'statusCode': 500, 'body': json.dumps({'error': str(e)})}

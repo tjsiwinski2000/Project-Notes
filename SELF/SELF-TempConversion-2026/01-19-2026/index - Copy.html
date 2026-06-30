@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To the Power of Math!</title>
+    <!-- Styling for the client UI -->
+    <style>
+    h1 {
+        color: #FFFFFF;
+        font-family: system-ui;
+		margin-left: 20px;
+        }
+	body {
+        background-color: #222629;
+        }
+    label {
+        color: #86C232;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+		margin-top: 20px;
+        }
+     button {
+        background-color: #86C232;
+		border-color: #86C232;
+		color: #FFFFFF;
+        font-family: system-ui;
+        font-size: 20px;
+		font-weight: bold;
+        margin-left: 30px;
+		margin-top: 20px;
+		width: 140px;
+        }
+	 input {
+        color: #222629;
+        font-family: system-ui;
+        font-size: 30px;
+        margin-left: 10px;
+		margin-top: 20px;
+		width: 100px;
+        }
+
+    .answer:invalid {
+        border: 2px dashed red;
+        }
+    
+    .answer:invalid:required {
+        border: 2px dashed red;
+        }
+    
+    .answer:valid {
+       background-color: rgb(160, 210, 160);
+       }
+
+    </style>
+</head>
+    <body>
+        <h1>Temp Conversion for Don!</h1>
+        <form>
+            <label>Temperature</label>
+            <input type="text" id="temp">
+            <label for="operation">Choose Conversion:</label>
+            <select id="operation">
+                <option value="c2f">Celsius to Fahrenheit</option>
+                <option value="f2c">Fahrenheit to Celsius</option>
+            </select>
+            <!-- set button onClick method to call function we defined passing input values as parameters -->
+            <button type="button" onclick="callAPI(document.getElementById('temp').value,document.getElementById('operation').value)">CALCULATE</button>
+            <!--<p  style="font-size:50px;color:white" class="js-problems" ></p> -->
+            <table style="font-size:50px;color:white" class="js-output" ></table>
+        </form>
+        <script>
+            // callAPI function that takes the base and exponent numbers as parameters
+            var callAPI = (temp,operation)=>{
+                // instantiate a headers object
+                var myHeaders = new Headers();
+                // add content type header to object
+                myHeaders.append("Content-Type", "application/json");
+                // using built in JSON utility package turn object to string and store in a variable
+                var raw = JSON.stringify({"temp":temp,"operation":operation});
+                // create a JSON object with parameters for API call and store in a variable
+                var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+                // make API call with parameters and use promises to get response
+                fetch("https://l10oonheo1.execute-api.us-east-1.amazonaws.com/DEV", requestOptions)
+                .then(response => response.text())
+                //.then(result => alert(JSON.parse(result).body))
+                .then(result => displayProblems(JSON.parse(result).body))
+                .catch(error => console.log('error', error));
+                
+            }
+
+            function displayProblems(apiInput){
+                console.log(apiInput);
+                document.querySelector('.js-output').innerHTML=apiInput;
+                }
+
+           
+        </script>
+    </body>
+
+
+
+</html>

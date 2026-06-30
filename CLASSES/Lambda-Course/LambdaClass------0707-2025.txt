@@ -1,0 +1,45 @@
+3:00pm SES email not sending despite errors being resolved.
+
+GEMINI thoughts
+- https://gemini.google.com/app/b3b5a544bfd43cb0
+- Crucial: Ensure the Source email address (from in your params object) is verified in the exact AWS region your Lambda is running in.
+=======================================
+Region Mismatch: 
+Double-check that the AWS region configured in your SES client in your Node.js code matches the region where your SES identities are verified.
+JavaScript
+
+// Example SES client initialization (ensure region matches your SES setup)
+const AWS = require('aws-sdk');
+const ses = new AWS.SES({ region: 'us-east-1' }); // <--- Make sure this region
+=======================================
+
+2. Check Lambda IAM Permissions:
+
+Your Lambda function needs the correct IAM permissions to interact with SES. This is configured in your serverless.yml (or template.yaml if using SAM).
+
+Look for the iamRoleStatements (or equivalent Policies in SAM) section for your Lambda function. It should have at least ses:SendEmail. If you're sending raw emails, you might also need ses:SendRawEmail.
+
+Example serverless.yml snippet:
+YAML
+
+# ... other serverless.yml content
+provider:
+  name: aws
+  runtime: nodejs20.x # Or your Node.js version
+  region: us-east-1 # Ensure this matches your SES region
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "ses:SendEmail" # For sending formatted emails
+            # - "ses:SendRawEmail" # Uncomment if you use sendRawEmail
+          Resource: "*" # Best practice: restrict to specific verified identities. See below.
+
+
+====================================================
+315pm
+- added : ({ region: 'us-east-1' }); to handler.js [line4]
+- retest, still no joy
+
+300pm attempt send test email directly from SES web userinterface, no joy.

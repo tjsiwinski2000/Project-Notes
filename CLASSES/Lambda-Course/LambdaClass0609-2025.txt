@@ -1,0 +1,23 @@
+To Edit State Function
+- (*) select Function
+- click {} Code
+
+Output - what's passed to the next stage
+"Output": {
+        "IsHelloWorldExample": true,
+        "ExecutionWaitTimeInSeconds": 3,
+        "waitTime": 10
+      },
+
+  
+"Silence": {
+      "Type": "Wait",
+      "Next": "Execute in Parallel",
+      "Assign": {
+        "CheckpointCount": "{% $CheckpointCount + 1 %}"
+      },
+      "Comment": "Lets wait for a bit here.",
+      "Seconds": "{% $states.input.waitTime %}"
+    },
+
+  NOTE: {% $states.input.waitTime %} is what references the waitTime in Output {}.

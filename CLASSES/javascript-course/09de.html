@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise</title>
+  </head>
+
+  <body>
+    <input class="js-name">
+    <button onclick="displayName()">
+      Submit
+    </button>
+    <p class="js-greeting"></p>
+  </body>
+
+  <script>
+    function displayName(){
+      const s='.js-name'
+      const nameElement=document.querySelector(s);
+      let name=nameElement.value;
+      const textElement=document.querySelector('.js-greeting');
+      textElement.innerHTML=`Your name is ${name} `
+    }
+    
+  </script>
+  
+</html>

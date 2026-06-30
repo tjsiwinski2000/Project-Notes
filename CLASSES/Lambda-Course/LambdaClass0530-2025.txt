@@ -1,0 +1,52 @@
+NOTES:
+- downgrade serverless version (Udemy student had same issue i had)
+- reference: https://stackoverflow.com/questions/78688148/sls-create-configuration-file-not-found-in-directory
+- ran command to associate newly created AWS user.
+====================================================
+C:\Users\TJ>serverless --version
+
+Serverless ϟ Framework 4.15.1
+
+
+C:\Users\TJ>npm i serverless@3.39.0 -g
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated superagent@7.1.6: Please upgrade to v9.0.0+ as we have fixed a public vulnerability with formidable dependency. Note that v9.0.0+ requires Node.js v14.18.0+. See https://github.com/ladjs/superagent/pull/1800 for insight. This project is supported and maintained by the team at Forward Email @ https://forwardemail.net
+
+added 569 packages, removed 23 packages, and changed 48 packages in 26s
+
+133 packages are looking for funding
+  run `npm fund` for details
+
+C:\Users\TJ>serverless --version
+(node:22440) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Framework Core: 3.39.0
+Plugin: 7.2.3
+SDK: 4.5.1
+
+
+C:\Users\TJ>serverless config credentials --provider aws --key --secret profile serverless-admin
+(node:15076) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Environment: win32, node 22.13.1, framework 3.39.0, plugin 7.2.3, SDK 4.5.1
+Docs:        docs.serverless.com
+Support:     forum.serverless.com
+Bugs:        github.com/serverless/serverless/issues
+
+Error:
+Profile "default" is already configured in ~/.aws/credentials. Use the overwrite flag ("-o" or "--overwrite") to force the update.
+
+C:\Users\TJ>serverless config credentials --provider aws  profile serverless-admin --overwrite
+(node:4412) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Profile "default" has been configured
+
+C:\Users\TJ>serverless config credentials --provider aws --key foo --secret foofoo --profile serverless-admin --overwrite
+(node:2380) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Profile "serverless-admin" has been configured

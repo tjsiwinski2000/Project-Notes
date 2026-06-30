@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .white-square{
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 15px 15px;
+        border-radius: 0px;
+        margin: 1px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        color: white;
+      }
+
+      .black-square {
+        background-color: rgb(184, 217, 135);
+        border: none;
+        padding: 15px 15px;
+        border-radius: 0px;
+        margin: 1px;
+        font-size: 25px;
+        cursor: pointer;
+      }   
+
+    </style>
+  </head>
+  <body>
+    <div class="js-board"></div>
+
+     <script>
+      renderBoard();
+      function renderBoard(){
+        let row="";
+        let rowNumber=1;
+        let nextSquare="";
+
+        const onclickAction="executeMove('.square-PH');"
+        //const whiteSquare= `<button class='white-square square-PH' onclick=${onclickAction}>P</button>`;
+        //const blackSquare= `<button class='black-square square-PH' onclick=${onclickAction}>P</button>`;
+
+        for (let i=1;i <65; i++){
+          let squareNum="a"+i;
+          console.log(squareNum)
+
+          let work_onclickAction=onclickAction.replace('PH',squareNum);
+
+          if ((i+rowNumber) % 2){
+            // alternate black, white squares
+             nextSquare=`<button class="black-square square-PH" onclick=${work_onclickAction}>P</button>`
+             nextSquare=nextSquare.replace('PH',squareNum);
+            //let nextSquare=blackSquare;
+            console.log("odd" + nextSquare)
+          }
+          else {
+             nextSquare=`<button class='white-square square-PH' onclick=${work_onclickAction}>P</button>`
+             nextSquare=nextSquare.replace('PH',squareNum);
+            console.log("even" + nextSquare)
+          }
+         
+         
+          row += nextSquare;
+          // add <br> to start new row if count divisible by 8
+          if ((i % 8)===0) { 
+            row += "<br>";
+            rowNumber++;
+          }
+        } /* for */
+
+        console.log("final-row" +row);
+        const inputElement=document.querySelector('.js-board')
+       
+        inputElement.innerHTML=row;
+      }// render board
+     
+      function executeMove(selector) {
+        const button = document.querySelector(selector);
+        button.innerHTML= "&nbsp&nbsp&nbsp"
+        if (!button.classList.contains('is-toggled')) {
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>

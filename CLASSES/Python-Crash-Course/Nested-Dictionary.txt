@@ -1,0 +1,7 @@
+employee = {
+    101: {"name": "Alice", "role": "Engineer", "salary": 95000},
+    102: {"name": "Bob", "role": "Designer", "salary": 82000},
+    103: {"name": "Charlie", "role": "Manager", "salary": 110000},
+    104: {"name": "Dana", "role": "Analyst", "salary": 75000},
+    105: {"name": "Eli", "role": "Developer", "salary": 88000}
+}

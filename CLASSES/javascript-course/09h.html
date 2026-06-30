@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+
+  <body>
+    <!--Everything typed in textbox 
+        Appears on the page via KeyUp method -->
+    <input class="js-input" onkeyup="showTextOnPage(event)">
+    <p class="js-textbox"></p>
+  </body>
+    <script>
+      function showTextOnPage (event){
+        const inputElement = document.querySelector('.js-input');
+        let inputText = inputElement.value;
+        document.querySelector('.js-textbox').innerHTML=inputText
+      }
+    </script>
+ 
+</html>

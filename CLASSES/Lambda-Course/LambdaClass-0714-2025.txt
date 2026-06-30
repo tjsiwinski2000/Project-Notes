@@ -1,0 +1,8 @@
+Lecture.77
+- so far we have 1.Setup serverless configurations 2.Upload quotes.json file->S3 
+-                 3.Create Rest API endpoint       4.Upload Run Test
+
+Next Subscribe / Save user email 
+
+[ERROR] "error message Missing the key userId in the item"
+-  userID: uuid.v4(), [should be userId compare to  dynamoTable]

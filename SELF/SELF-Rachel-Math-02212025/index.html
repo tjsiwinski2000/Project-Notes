@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To the Power of Math!</title>
+    <!-- Styling for the client UI -->
+    <style>
+    h1 {
+        color: #FFFFFF;
+        font-family: system-ui;
+		margin-left: 20px;
+        }
+	body {
+        background-color: #222629;
+        }
+    label {
+        color: #86C232;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+		margin-top: 20px;
+        }
+     button {
+        background-color: #86C232;
+		border-color: #86C232;
+		color: #FFFFFF;
+        font-family: system-ui;
+        font-size: 20px;
+		font-weight: bold;
+        margin-left: 30px;
+		margin-top: 20px;
+		width: 140px;
+        }
+	 input {
+        color: #222629;
+        font-family: system-ui;
+        font-size: 30px;
+        margin-left: 10px;
+		margin-top: 20px;
+		width: 100px;
+        }
+
+    .answer:invalid {
+        border: 2px dashed red;
+        }
+    
+    .answer:invalid:required {
+        border: 2px dashed red;
+        }
+    
+    .answer:valid {
+       background-color: rgb(160, 210, 160);
+       }
+
+    </style>
+</head>
+    <body>
+        <h1>Sumachel :  MATH!</h1>
+        <form>
+            <label>Number of Problems:</label>
+            <input type="text" id="base">
+            <label>..Max Value:</label>
+            <input type="text" id="exponent">
+            <!-- set button onClick method to call function we defined passing input values as parameters -->
+            <button type="button" onclick="callAPI(document.getElementById('base').value,document.getElementById('exponent').value)">CALCULATE</button>
+            <!--<p  style="font-size:50px;color:white" class="js-problems" ></p> -->
+            <table style="font-size:50px;color:white" class="js-problems" ></table>
+        </form>
+        <script>
+            // callAPI function that takes the base and exponent numbers as parameters
+            var callAPI = (base,exponent)=>{
+                // instantiate a headers object
+                var myHeaders = new Headers();
+                // add content type header to object
+                myHeaders.append("Content-Type", "application/json");
+                // using built in JSON utility package turn object to string and store in a variable
+                var raw = JSON.stringify({"base":base,"exponent":exponent});
+                // create a JSON object with parameters for API call and store in a variable
+                var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+                // make API call with parameters and use promises to get response
+                fetch("https://1z02i6c3v1.execute-api.us-west-1.amazonaws.com/dev", requestOptions)
+                .then(response => response.text())
+                //.then(result => alert(JSON.parse(result).body))
+                .then(result => displayProblems(JSON.parse(result).body))
+                .catch(error => console.log('error', error));
+                
+            }
+
+            function displayProblems(apiInput){
+                console.log(apiInput);
+                //document.querySelector('.js-problems').innerHTML=apiInput;
+                let problemReport ="";
+                const problemsRaw = String(apiInput).split(';');
+                problemsRaw.forEach(
+                    item => {console.log(item);
+                        if (item.length > 1){
+                            problemReport += '<tr><td>' +item.split(",")[0] + '</td><td>=</td><td><input class = answer required pattern="' + item.split(",")[1]+'"  placeholder="?"></td></tr>';
+                        } //if
+                    })
+                problemReport =String(problemReport).replaceAll('"','');
+                console.log ('****foo**\n' + problemReport);
+                document.querySelector('.js-problems').innerHTML=problemReport;
+                }
+
+           
+        </script>
+    </body>
+
+
+
+</html>

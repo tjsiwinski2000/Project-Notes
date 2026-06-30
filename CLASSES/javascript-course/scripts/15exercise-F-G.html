@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  
+  <body>
+    TJ was here
+    <div class="exercise"></div>
+  </body> 
+
+</html>
+
+<script type = "module">
+  import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+
+  //Exercise 15g import and rename a function
+  import {IsWeekend as IsSaturdaySunday} from './15exercise-F.js';
+
+
+  const today = dayjs();
+  let report ="";
+  const deliveryDate = today.add( 5, 'days' );
+
+  // this works 05062025 3:25pm
+  console.log(`${deliveryDate} : ${IsSaturdaySunday(deliveryDate)}`);
+
+  // this worked **before** rename to IsSaturdaySunday
+  console.log(`${deliveryDate} : ${IsWeekend(deliveryDate)}`);
+</script>

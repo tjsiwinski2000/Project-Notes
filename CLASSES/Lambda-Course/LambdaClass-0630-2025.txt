@@ -1,0 +1,36 @@
+listTodos.js
+  "errorMessage":   "SyntaxError: Missing initializer in const declaration","/var/task/handler/listTodos.js:7",
+  const params = {TableName: TODO_TABLE}
+  [RESOLUTION] "=" sign was erased by mistake 
+
+  ====================================
+  "errorMessage" listTodos.js - returns empty string
+
+  [RESOLUTION] 
+  WAS body: JSON.stringify(data.Items)
+  NOW: body: data.Items
+  ====================================
+ [serverless.yml] 
+ list:
+  handler: handler/listTodos.listTodos
+  events:
+    - http: 
+        path: todos/list
+        method: get
+        cors: true   
+
+NOTE: "path" determines endpoint 
+https://zhyk98bnh9.execute-api.us-east-1.amazonaws.com/dev/todos/list
+
+======================================
+bad gateway error POSTMAN
+[chatgpt]
+- whats returned by API has to be JSON string not JSON object
+- "body": JSON.stringify(data.Items) -> fixed issue for listTodos.js 
+                                                                                                                                                  
+endpoints:
+  POST - https://zhyk98bnh9.execute-api.us-east-1.amazonaws.com/dev/todoos                                                                                                                                                                                           
+  GET - https://zhyk98bnh9.execute-api.us-east-1.amazonaws.com/dev/todoos/list
+
+  ====================================
+  "a24f2030-554e-11f0-9287-1b67aa69b61a"

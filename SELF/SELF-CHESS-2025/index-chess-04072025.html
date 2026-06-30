@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .white-square{
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 15px 15px;
+        border-radius: 0px;
+        margin: 1px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        color: white;
+      }
+
+      .black-square {
+        background-color: rgb(184, 217, 135);
+        border: none;
+        padding: 15px 15px;
+        border-radius: 0px;
+        margin: 1px;
+        font-size: 25px;
+        cursor: pointer;
+      }   
+
+    </style>
+  </head>
+  <body>
+  <p class="js-board"></p>
+  
+    <button class='white-square'><img src='.\images\white-pawn.jpg'></button>
+    <button class='black-square'>P</button>
+
+    
+    <script>
+
+      // The word "toggle" means turn on/off.
+      function executeMove(selector) {
+        const button = document.querySelector(selector);
+        if (!button.classList.contains('is-toggled')) {
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
+      }
+
+      let wsquare="<button class='white-square'>P</button>";
+      let bsquare="<button class='black-square'>P</button>";
+      let board="";
+      let rowNumber=1;
+      for (let i=1;i<65;i++)
+      {
+        
+        if ((i > 8) && (i < 17 )) {
+          bsquare=bsquare.replace('P','<img src=".\\images\\white-pawn.jpg">');
+          wsquare=wsquare.replace('P','<img src=".\\images\\white-pawn.jpg">');
+        }
+        
+        else {
+          if ((i > 48) && (i<57)){
+            bsquare=bsquare.replace('P','<img src=".\\images\\black-pawn.jpg">');
+            wsquare=wsquare.replace('P','<img src=".\\images\\black-pawn.jpg">');
+          }
+          else{
+            wsquare="<button class='white-square'>P</button>";
+            bsquare="<button class='black-square'>P</button>";
+          }
+
+        }
+
+        if ((i + rowNumber) % 2 ) {
+          board += bsquare;
+          //"<img src='.\images\rock-emoji.png'>"
+        }
+        else {
+          board += wsquare;
+        }
+
+        if ((i % 8)===0) { 
+            board += "<br>";
+            rowNumber++;
+        }
+          
+      }
+      //https://www.alamy.com/chess-figures-pieces-in-flat-style-vector-illustration-black-chess-icons-set-chess-black-and-white-figures-king-queen-bishop-knight-rook-pawn-image359878434.html?imageid=C34C005F-98A6-432C-BA6C-54A5289076D3&p=833118&pn=3&searchId=fbb25c14a9fe40e339336c72c6ffc9c1&searchtype=0
+      //board = board.replaceAll('P','<img src=".\\images\\white-pawn.jpg">')
+      const object = {
+        ShowBoard() {
+          const boardElement=document.querySelector('.js-board');
+          boardElement.innerHTML=board;
+        }
+      }
+      object.ShowBoard();
+    </script>
+  </body>
+</html>

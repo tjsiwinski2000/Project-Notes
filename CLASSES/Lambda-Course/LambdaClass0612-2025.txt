@@ -1,0 +1,36 @@
+NOTE: show all profiles
+C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\final-python-thumbnail-0612-2025>aws configure list-profiles
+default
+amplify-dev-local-01272025
+amplify-dev-local
+serverless-admin
+serveless-admin-0604-2025
+=============================================
+=============================================
+NOTE: run serveless function locall
+C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\final-python-thumbnail-0612-2025>sls invoke local --function hello
+...
+{
+    "statusCode": 200,
+    "body": "{\"message\": \"Go Serverless v3.0! Your function executed successfully!\", \"input\": {}}"
+}
+=============================================
+=============================================
+UPDATES Serverless.yml
+provider:
+  name: aws
+  runtime: python3.9
+  region: us-east-1
+  profile: serverless-admin
+  stage: dev
+  timeout: 10
+  memorySize: 128
+  environment:
+    THUMBNAIL_SIZE: 128
+    REGION_NAME: ${self:provider.region}
+
+=============================================
+=============================================
+sls plugin install -n serverless-python-requirements
+
+✔ Plugin "serverless-python-requirements" installed  (249s)

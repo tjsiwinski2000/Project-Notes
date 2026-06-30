@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ANIMAL PROJECT 2025</title>
+    <!-- Styling for the client UI -->
+    <link rel="stylesheet" href="main-animals-2025.css">
+</head>
+    <body>
+        <h1>ANIMAL PROJECT 2025</h1>
+
+        <div class="zoom-container"></div>
+        <div id="editFormContainer" style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ccc;">
+            <h2>Edit the Entry</h2>
+            <form id="editForm">
+              <label for="editUuid">UUID:</label><br>
+              <input type="text" id="editUuid" name="uuid" readonly size =50 style="background-color:gray"><br><br>
+              
+              <label for="editName">Name:</label><br>
+              <input type="text" id="editName" name="animalname" size= 50><br><br>
+              
+              <label for="editImage">Image:</label><br>
+              <input type="text" id="editImageInput" name="Image" size= 110><br><br>
+ 
+              <label for="editFunFact">Fun Fact:</label><br>
+              <!-- <input type="text" id="editFunFact" name="FunFact" rows="5" maxlength = "900"> -->
+              <textarea  class="full-width-textarea" id="editFunFact" name="FunFact" rows="10" ></textarea><br><br>
+
+              <button type="submit" class="oval-button2">Save Changes</button>
+              <button type="button" class="oval-button2" id="cancelEdit">Cancel</button>
+            </form>
+          </div>
+          <div id="addFormContainer" style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ccc;">
+            <h2>Add Entry</h2>
+            <form id="addForm">
+              <label for="addName">Name:</label><br>
+              <input type="text" id="addNameInput" name="animalname" size= 110><br><br>
+          
+              <label for="addImage">Image:</label><br>
+              <input type="text" id="addImageInput" name="image" size= 50><br><br>
+     
+              <button type="submit" class="oval-button2">Save Changes</button>
+              <button type="button" class="oval-button2" id="cancelAdd">Cancel</button>
+            </form>
+          </div>  
+         
+          <table style="font-size:15px;color:black" class="js-grid-output" border ="1">
+          <!-- set button onClick method to call RETRIEVE-ALL function  -->
+          <form>
+            <button type="button" class="oval-button" onclick="if (prompt('Enter password:') === '1914'){displayAllRecordsInHTMLgridTable()}">SHOW ALL ENTRIES</button>
+            <button type="button" class="oval-button" onclick="addEntry()">ADD ENTRIES</button>
+            <button type="button" class="oval-button" onclick="displayHeroImagesWithLinks()">HERO ENTRIES</button>
+         </form>
+
+          
+          <!-- <script src="main-animals-2025.js"> -->
+          <script src="retrieve-all-records.js"></script>
+          <script src="add-edit-form-engine.js"></script>
+          <script src="page-load-index.js"></script>
+    </body>
+
+
+
+</html>

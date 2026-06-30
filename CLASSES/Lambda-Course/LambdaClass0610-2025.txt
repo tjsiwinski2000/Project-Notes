@@ -1,0 +1,9 @@
+Deploy Paulo's aws-node-cat-age-sf
+- FROM C:\Users\TJ\source\repos\Project-Notes\Lambda-Course
+- sls create --help [find template name]
+- sls create --template  aws-nodejs --path .\Nodejs-0610-2025
+
+Manually copy Paolo's files to new directory.
+-FROM C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\Nodejs-0610-2025
+-updated serverless.yml  runtime: nodejs18.x [14x was EOL]
+-sls deploy

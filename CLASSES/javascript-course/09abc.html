@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+
+  <body>
+    <button>9a</button>
+    <button class="js-button2">9b</button>
+    <br>
+    <button onclick="
+      displayChoice('heads')
+    ">heads</button>
+
+    <button onclick="
+      displayChoice('tails')
+    ">tails</button>
+
+    <p class="js-headTailChoice"></p>
+  </body>
+
+  <script>
+    console.log(document.querySelector('button'));
+    const buttonElement=document.querySelector('.js-button2');
+    buttonElement.innerHTML="9b done!";
+
+    function displayChoice(choice){
+      const textElement=document.querySelector('.js-headTailChoice');
+      textElement.innerHTML=`You chose: ${choice}`;
+    }
+  </script>
+  
+</html>

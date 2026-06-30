@@ -1,0 +1,16 @@
+{% extends 'pizza/base.html'%}
+
+{% block content %}
+    <ul>
+        {% for t in topping_list %}
+            <li>
+                {{ t.name}}
+            </li>
+
+        {% empty %}
+            <li>No toppings found</li>
+
+        {% endfor %}
+        
+        
+{% endblock content %}

@@ -1,0 +1,56 @@
+0502-2025
+- create chess-lambda.py
+-        chess-lambda-v2.py
+
+
+
+    Directory: C:\Users\TJ\source\repos\Project-Notes\PythonTesting
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          5/2/2025   3:08 PM                package
+-a----          5/2/2025   2:57 PM           1130 chess-lambda-v2.py
+-a----          5/2/2025   2:35 PM           1106 chess-lambda.py
+-a----          5/1/2025   5:30 PM            994 chess.py
+-a----         3/14/2025   3:50 PM           1250 random_math_problems.py
+-a----         2/25/2025   1:53 PM           1267 random_math_problem_lambda - Copy.py
+-a----         3/15/2025   2:50 PM           1391 random_math_problem_lambda.py
+-a----          5/2/2025   3:08 PM              8 requirements.txt
+
+Referencing 
+https://stackoverflow.com/questions/46991117/aws-python-lambda-functionno-module-named-requests
+
+Basically [guessing]
+1. need to zip chess-lambda (which references response lib) and "package" above
+2. zip file needs to uploaded via (Upload from) on 
+- https://us-west-1.console.aws.amazon.com/lambda/home?region=us-west-1#/functions/chess-0502-2025?newFunction=true&subtab=tags&tab=code
+=========================
+545pm
+- chess-lambda-v3.py [chatgpt]
+- (/) works as lambda function
+passed below as FEN:
+"8/1P1R4/n1r2B2/3Pp3/1k4P1/6K1/Bppr1P2/2q5 w - - 0 1"
+ rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - - 0 1
+ 
+FEN Viewer: https://www.redhotpawn.com/chess/chess-fen-viewer.php
+was helpful
+
+0503-2025
+s={
+  "text": "Move d5 → f5 (Rf5+): [6.68]. White is winning. Depth 12.",
+  "captured": false,
+ ...}
+
+0505-2025
+const myObj = { a: 1, b: 2, c: 3 };
+    for (const property in myObj) {
+      console.log(`${property}: ${myObj[property]}`);
+    }
+
+- displayed API Output from chess-api.
+https://staging.d26hgwuh47qchr.amplifyapp.com/
+
+- researched JS boards
+Chess JS board (looks legit) 
+https://stackoverflow.com/questions/74911212/use-javascript-library-chessboard-js

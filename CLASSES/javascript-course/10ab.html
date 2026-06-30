@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <style>
+      .button {
+      background-color: rgb(255, 216, 20);
+      width: 150px;
+      height: 35px;
+      border-radius: 15px;
+      margin:10px;
+      cursor: pointer;
+      padding-left: 30;
+      padding-right: 30;
+      font-size:medium;
+      border: none;
+      }
+    .amazon-button {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        padding: 5px 40px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button" onclick="alert('good job')" >Add to Cart</button>
+
+    <button class="amazon-button">
+      Add to Cart
+    </button>
+    <script>
+      const buttonElement =document.querySelector('.amazon-button')
+      console.log(buttonElement.classList.contains('amazon-button'));
+     </script>
+  </body>
+</html>
+

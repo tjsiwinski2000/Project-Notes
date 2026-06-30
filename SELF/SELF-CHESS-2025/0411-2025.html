@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 55px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        }
+    </style>
+  </head>
+  <button id="myButton1" class="chess">
+    <img id="buttonImage" >
+</button>
+
+  <button id="myButton2" class="chess">
+    <img id="buttonImage">
+</button>
+
+
+
+  <script>
+    // chatgpt PROVIDED to change images
+    function changeButtonImage() {
+        var buttonImage = document.getElementById("buttonImage");
+          buttonImage.src = '.\\images\\black-pawn.jpg';  // Replace with the new image source
+    }
+
+    //changeButtonImage();
+    console.log(document.getElementsByClassName("chess"))
+    document.getElementsByClassName("chess").array.forEach(element => {
+      var buttonImage = document.getElementById(element);
+      buttonImage.src = '.\\images\\black-pawn.jpg'; 
+    });
+    //var buttonImage = document.getElementById("myButton1");
+    //buttonImage.src='.\\images\\black-pawn.jpg';
+
+  </script>
+  </body>
+</html>

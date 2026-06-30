@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops 0402-2025</title>
+
+  </head>
+
+  <body>
+    <button class="startButton" onclick="
+      changeButton(); 
+      ">Start.12c</button>
+      <p></p>
+      <button class="startButton12d" onclick="
+      changeButton12d(); 
+      ">Start.12d</button>
+
+    <script>
+        // --12A--------------------------------
+        // create variable "add"
+        // save a function inside that console logs (2+3)
+        const add = function (){
+          console.log(2+3)
+        }
+        add();
+        add();
+
+        // --12B--------------------------------
+        // create function "runTwice(fun)"
+        // takes function as param and runs twice
+        function runTwice(fun){
+          fun();
+          fun();
+        }
+        runTwice(add);
+
+        // --12C--------------------------------
+        // create a function: change button caption : 5 second delay
+        function changeButton(){
+          const buttonElement =document.querySelector('.startButton');
+          setTimeout(function(){
+            buttonElement.innerHTML='Finished';
+          }, 5000);
+        }
+
+        function changeButton12d(){
+          const buttonElement=document.querySelector('.startButton12d');
+          buttonElement.innerHTML="Loading..."
+          setTimeout(function() {
+            buttonElement.innerHTML='Finished!';
+          },5000);
+        }
+    </script>
+  </body>
+</html>

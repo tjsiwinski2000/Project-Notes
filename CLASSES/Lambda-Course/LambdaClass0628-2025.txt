@@ -1,0 +1,30 @@
+Lesson62
+5:00pm error needs to be addressed= still in
+"errorType": "SyntaxError",
+  "errorMessage": "Unexpected token u in JSON at position 0",
+  "trace": [
+    "SyntaxError: Unexpected token u in JSON at position 0",
+    "    at JSON.parse (<anonymous>)",
+    "    at module.exports.createTodo (/var/task/handler/createTodo.js:9:23)",
+    "    at /var/task/serverless_sdk/index.js:24:10381",
+    "    at /opt/sls-sdk-node/wrapper.js:13368:92",
+
+[ChatGPT]
+"errorMessage": "Unexpected token u in JSON at position 0"
+means that your code tried to JSON.parse() something, but the input was undefined, and JSON.parse(undefined) throws that exact error.
+// from handler.py ->current_timestamp = datetime.now().isoformat()
+
+//0628-2025 Testing createTodo.js
+const s=JSON.stringify(event, null, 2)
+console.log("EVENT:", s.body);  => undefind error 
+
+const s=JSON.stringify(event, null, 2)
+console.log("EVENT:", s.todo); => undefind error
+
+const s=(event, null, 2)
+console.log("EVENT:", s.todo);=> undefind error
+
+const s=JSON.stringify(event, null, 2)
+console.log("EVENT1:", s)
+const t= JSON.parse(s);
+console.log("EVENT2:", t.todo); // this works for some insane sadistic reason that I wll never understand.

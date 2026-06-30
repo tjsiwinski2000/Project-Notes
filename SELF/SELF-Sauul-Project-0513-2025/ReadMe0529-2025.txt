@@ -1,0 +1,132 @@
+FROM YOUTUBE
+https://www.youtube.com/watch?v=D3Sd0RvNSvU
+
+https://www.youtube.com/watch?v=MvUdqXI-s7g
+- has git links in description
+- might be easiest?
+
+https://www.youtube.com/watch?v=RaZ0IkkfIhg
+- might be simpliest
+- direct connect
+- added Amazon-SNS-Full-Access to joseph1967
+
+FROM CHATGPT
+ Overview of Architecture
+
+    Frontend (Website)
+
+        Built with HTML/CSS/JavaScript (or frameworks like React).
+
+        Users enter phone numbers and request password/SMS.
+
+    Backend
+
+        API to handle SMS sending and password generation.
+
+        Hosted on AWS Lambda (serverless) or EC2.
+
+    SMS Service
+
+        Amazon SNS (Simple Notification Service) to send SMS messages.
+
+    Security
+
+        Protect the API (e.g., with API Gateway and Cognito if needed).
+
+        Passwords generated securely and optionally logged to a DB (RDS/DynamoDB).
+
+✅ Step-by-Step Guide
+1. Set Up AWS SNS for SMS
+
+    Go to Amazon SNS in AWS Console.
+
+    In Text messaging (SMS), request production access if needed.
+
+    Set SMS preferences (spending limits, etc.).
+
+2. Create IAM Role
+
+    Give permissions to access SNS (e.g., sns:Publish).
+
+    Use this role in Lambda or attach to EC2.
+
+3. Create the Lambda Function
+
+You can use AWS Lambda to send the SMS when triggered.
+
+Example (Python):
+
+import boto3
+import random
+import string
+
+def lambda_handler(event, context):
+    phone_number = event['phone_number']
+    password = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+    
+    sns = boto3.client('sns')
+    message = f"Your one-time password is: {password}"
+    
+    sns.publish(
+        PhoneNumber=phone_number,
+        Message=message
+    )
+    
+    return {"status": "sent", "password": password}
+
+🛡️ Important: Consider not returning the password in production for security.
+4. Set Up API Gateway
+
+    Create a REST API or HTTP API in Amazon API Gateway.
+
+    Connect it to the Lambda function.
+
+    Deploy and get an endpoint (e.g., https://api.example.com/send-password).
+
+5. Frontend (Website)
+
+Basic HTML+JS example:
+
+<!DOCTYPE html>
+<html>
+<head><title>Send Password</title></head>
+<body>
+  <input type="text" id="phone" placeholder="Enter phone number">
+  <button onclick="sendPassword()">Send Password</button>
+  <script>
+    async function sendPassword() {
+      const phone = document.getElementById('phone').value;
+      const response = await fetch('https://api.example.com/send-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone_number: phone })
+      });
+      const data = await response.json();
+      alert("SMS sent!");
+    }
+  </script>
+</body>
+</html>
+
+6. Host the Website
+
+You can host the frontend using:
+
+    Amazon S3 Static Website Hosting (recommended for static sites)
+
+    Amazon Amplify (easier CI/CD if using GitHub)
+
+    EC2 (for full control)
+
+🧠 Tips
+
+    SMS cost: AWS charges per message, per country. Pricing
+
+    SMS support: Check if your target country supports SMS via AWS SNS.
+
+    Consider rate-limiting and logging for abuse prevention.
+
+    For more complex flows, use AWS Pinpoint (richer messaging, analytics).
+	
+FROM AWS DOCUMENTATION
+https://docs.aws.amazon.com/sns/latest/dg/sms_sending-overview.html

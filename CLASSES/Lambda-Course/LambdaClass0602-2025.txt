@@ -1,0 +1,27 @@
+YAML Crash Course
+---
+ doe: "a deer, a female deer"
+ ray: "a drop of golden sun"
+ pi: 3.14159
+ xmas: true
+ french-hens: 3
+ calling-birds:
+   - huey
+   - dewey
+   - louie
+   - fred
+ xmas-fifth-day:
+   calling-birds: four
+   french-hens: 3
+   golden-rings: 5
+   partridges:
+     count: 1
+     location: "a pear tree"
+   turtle-doves: two
+The file starts with three dashes. These dashes indicate the start of a new YAML document. YAML supports multiple documents, and compliant parsers will recognize each set of dashes as the beginning of a new one.
+
+Next, we see the construct that makes up most of a typical YAML document: a key-value pair. The “doe” is a key that points to a string value: “a deer, a female deer”. YAML supports more than just string values. The file starts with six key-value pairs. They have four different data types. “doe” and “ray” are strings. The “pi” is a floating-point number. The “xmas” is a boolean. The “french-hens” is an integer. You can enclose strings in single(‘) or double-quotes(“) or no quotes at all. YAML recognizes unquoted numerals as integers or floating point.
+
+The seventh item is an array. The “calling-birds” has four elements, each denoted by an opening dash. I indented the elements in “calling-birds” with two spaces. Indentation is how YAML denotes nesting. The number of spaces can vary from file to file, but tabs are not allowed. We'll look at how indentation works below.
+
+Finally, we see “xmas-fifth-day”, which has five more elements inside it, each of them indented. We can view “xmas-fifth-day” as a dictionary that contains two string, two integers, and another dictionary. YAML supports nesting of key-values, and mixing types.

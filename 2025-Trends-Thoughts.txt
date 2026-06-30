@@ -1,0 +1,10 @@
+Lucy: https://www.youtube.com/watch?v=b3k45SnSBBw&t=2s
+1:03 Trend 1: AI-In-Everything
+3:19 Trend 2: Cost Optimisation & Sustainability
+4:35 Trend 3: Security is a Core Expectation
+5:24 Varonis Free Data Risk Assessment
+6:13 Trend 4: Serverless Is Becoming the Default
+7:43 Trend 5: From Multi-Cloud to Cloud-Agnostic
+2024-Research-Report 
+- global Serverless market is $24B and growing
+- cloud agnostic: containers,kubernetes,terraform,opensource

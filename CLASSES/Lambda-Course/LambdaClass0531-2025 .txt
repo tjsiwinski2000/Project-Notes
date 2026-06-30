@@ -1,0 +1,12 @@
+NOTE: show all deployed functions
+-sls deploy list functions
+hello
+  All versions: $LATEST, 1
+
+NOTE: deploy the function only 
+-sls deploy function -f hello
+
+NOTE: invoke function from the cmd line --show log 
+-sls invoke -f hello
+-sls invoke -f hello --log
+-sls logs -f hello

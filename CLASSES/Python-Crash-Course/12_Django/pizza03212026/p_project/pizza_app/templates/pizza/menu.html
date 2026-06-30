@@ -1,0 +1,19 @@
+{% extends 'pizza/base.html'%}
+
+{% block content %}
+    <ul>
+        {% for p in pizza_types %}
+            <li>
+                
+                <a href="{% url 'pizza_app:pizza_toppings' p.id %}" >{{ p.pizza_name}}</a>
+                <!-- This line works ⬆️ and creates  linK: pizza_toppings/1/   -->
+
+            </li>
+
+        {% empty %}
+            <li>No pizzas found</li>
+
+        {% endfor %}
+        
+        
+{% endblock content %}

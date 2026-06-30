@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API Call Demo </title>
+    <!-- Styling for the client UI -->
+    <style>
+    h1 {
+        color: #FFFFFF;
+        font-family: system-ui;
+		margin-left: 20px;
+        }
+	body {
+        background-color: #222629;
+        }
+    label {
+        color: #86C232;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+		margin-top: 20px;
+        }
+     button {
+        background-color: #86C232;
+		border-color: #86C232;
+		color: #FFFFFF;
+        font-family: system-ui;
+        font-size: 20px;
+		font-weight: bold;
+        margin-left: 30px;
+		margin-top: 20px;
+		width: 140px;
+        }
+	 input {
+        color: #222629;
+        font-family: system-ui;
+        font-size: 30px;
+        margin-left: 10px;
+		margin-top: 20px;
+		width: 100px;
+        }
+
+    .answer:invalid {
+        border: 2px dashed red;
+        }
+    
+    .answer:invalid:required {
+        border: 2px dashed red;
+        }
+    
+    .answer:valid {
+       background-color: rgb(160, 210, 160);
+       }
+
+    </style>
+</head>
+    <body>
+        <h1>🌄🌅 2:25pm</h1>
+        <button type="button" onclick="callAPI()">CALCULATE</button>
+        <!--<p  style="font-size:50px;color:white" class="js-problems" ></p> -->
+        <table style="font-size:15px;color:white" class="js-problems" ></table>
+        
+        <script>
+            // callAPI to return sunrise, sunset for SA Texas
+            var callAPI = (base,exponent)=>{
+                 // instantiate a headers object
+                 var myHeaders = new Headers();
+                 // add content type header to object
+                 myHeaders.append("Content-Type", "application/json");
+                 // using built in JSON utility package turn object to string and store in a variable
+                 var raw = JSON.stringify({"var1":2,"var2":3});
+                 // create a JSON object with parameters for API call and store in a variable
+                 var requestOptions = {
+                     method: 'POST',
+                     headers: myHeaders,
+                     body: raw,
+                     redirect: 'follow'
+                 };
+                // make API call with parameters and use promises to get response
+                fetch("https://37pxhj80h4.execute-api.us-west-1.amazonaws.com/DEV", requestOptions)
+                .then(response => response.json()) //Changes the response to a JSON object
+                //.then(result => alert(JSON.parse(result).body))
+                .then(result => displayAPIoutput(result.body)) //result is now parsed to a JS object 
+                .catch(error => console.log('error', error));
+                
+            }
+
+            function displayAPIoutput(apiInput){
+                console.log(apiInput);
+                //document.querySelector('.js-problems').innerHTML=apiInput;
+                //let problemReport ="";
+                //const problemsRaw = String(apiInput).split(';');
+                //problemsRaw.forEach(
+                    //item => {console.log(item);
+                        //if (item.length > 1){
+                            //problemReport += '<tr><td>' +item.split(",")[0] + '</td><td>=</td><td><input class = answer required pattern="' + item.split//(",")[1]+'"  placeholder="?"></td></tr>';
+                        //} //if
+                    //})
+                //problemReport =String(problemReport).replaceAll('"','');
+                //console.log ('****foo**\n' + problemReport);
+                //const apiParsedInput=JSON.parse(apiInput);
+                //const sunrise = apiParsedInput.data.results.sunrise
+                //console.log(sunrise)
+                //const sunset = apiParsedInput.data.results.sunset
+                //console.log(sunset) {% endcomment %}
+                // Use JSON.parse() to convert the string into a JavaScript array
+                console.log("---new code---below---")
+                const jsArray = apiInput;
+                //console.log(jsArray);
+                let quizReport="";
+                jsArray.forEach(element => {
+                    // Access properties using dot or bracket notation
+                    const q = element.question;
+                    const ca = element.correct_answer;
+                    quizReport += '<tr><td>' + q + '</td><td>' + ca + '</td></tr>'
+                    console.log(`${q} answer: ${ca} `);
+                  });
+                document.querySelector('.js-problems').innerHTML=quizReport;
+
+
+                }
+
+           
+        </script>
+    </body>
+
+
+
+</html>

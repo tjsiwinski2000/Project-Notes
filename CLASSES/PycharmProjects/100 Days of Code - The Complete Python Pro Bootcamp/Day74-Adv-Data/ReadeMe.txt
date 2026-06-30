@@ -1,0 +1,6 @@
+0507-2026
+
+attached files for exercises Day74
+
+- junipter notebook 
+- panda/matplotlib 

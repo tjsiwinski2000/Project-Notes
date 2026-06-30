@@ -1,0 +1,23 @@
+org: tjcloud2025
+app: aws-node-project
+service: final-aws-ses-email
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "ses:*"
+      Resource:
+            - "*"
+
+functions:
+  create:
+    handler: handler.createContact
+    events:
+      - http:
+          path: post/contact-us
+          method: post
+          cors: true 

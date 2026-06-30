@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+
+  </head>
+
+  <body>
+    
+    <script>
+     // FizzBuzz Problem [1..20]
+
+     for (let i=1 ; i<21; i++) {
+        //console.log(i);
+        if ((i % 3 ===0) && (i % 5 ===0)){
+          console.log('FizzBuzz');
+          continue;
+        } 
+        if (i % 3 ===0) {console.log ('Fizz');}
+        if (i % 5 ===0) {console.log ('Buzz');}
+        if ((i % 3 !==0) && (i % 5 !==0)) {console.log(i)};
+      }
+
+      // FizzBuzz Approved-Solution
+      for (let i = 1; i <= 20; i++) {
+        // The trick to this problem is to check if
+        // the number is divisible by 3 and 5 first.
+        // Otherwise, it will always display 'Fizz'.
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log('FizzBuzz');
+
+        } else if (i % 3 === 0) {
+          console.log('Fizz');
+
+        } else if (i % 5 === 0) {
+          console.log('Buzz');
+          
+        } else {
+          console.log(i);
+        }
+      }
+      
+
+    </script>
+  </body>
+</html>

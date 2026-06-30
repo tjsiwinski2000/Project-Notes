@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+
+  </head>
+
+  <body>
+    
+    <script>
+     
+      const nums = [-2, -1, 0,99];
+      let test=[];
+      test = addNum(nums,2);
+      for(let i=0; i < test.length; i++){
+        console.log(test[i]);
+      }
+
+      console.log(`postive numbers ${countPositive(nums)}`);
+      function addNum(array,num){
+        const newArray=[];
+        for(let i=0; i < array.length; i++){
+          let newNum=array[i]+num;
+          newArray.push(newNum);
+        }
+        return newArray
+      }
+
+      function countPositive(array){
+        let total=0
+        for(let i=0; i < array.length; i++){
+          if (array[i] > 0 ){
+            total++
+          }
+        }
+        return total;
+      }
+    </script>
+  </body>
+</html>

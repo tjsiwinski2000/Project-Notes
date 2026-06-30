@@ -1,0 +1,23 @@
+When you deploy an api
+- Invoke URL is displayed
+- e.g. https://nji31g2j3c.execute-api.us-east-1.amazonaws.com/dev/
+- this fails [missing token issue]
+https://nji31g2j3c.execute-api.us-east-1.amazonaws.com/dev/images/all
+- this ^ works 
+- syntax is provided in serverless.yml [see below]
+  list:
+      handler: handler.s3_get_thumbnail_urls
+      events:
+        - http:
+            path: images/all
+            method: get
+            cors: true
+
+https://nji31g2j3c.execute-api.us-east-1.amazonaws.com/dev/images/get/44b47df4-a0ab-4305-b1e6-97778c3b2d03
+- this ^ works
+- syntax is provided in serverless.yml [see below]
+  get:
+      handler: handler.s3_get_item
+      events:
+        - http:
+            path: images/get/{id}

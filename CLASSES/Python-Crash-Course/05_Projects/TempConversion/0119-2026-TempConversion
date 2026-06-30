@@ -1,0 +1,27 @@
+import json
+
+def convert_c_to_f(temp):
+    # convert celsius to fahrenheit
+    converted_temp = int(temp) * 9/5 +32
+    return converted_temp
+
+def convert_f_to_c(temp):
+    # convert celsius to fahrenheit
+    converted_temp = (int(temp) -32) * 5/9
+    return converted_temp
+
+def lambda_handler(temp, function):
+    output = 99
+    if function == 'c2f':
+        output = convert_c_to_f(temp)
+    if function == 'f2c':
+        output = convert_f_to_c(temp)
+    return {
+        'statusCode': 200,
+        'body': json.dumps(output)
+    } 
+
+
+#print(convert_c_to_f(input()))
+#print(lambda_handler(100,'c2f'))
+print(lambda_handler(212,'f2c'))

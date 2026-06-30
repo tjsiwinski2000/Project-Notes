@@ -1,0 +1,12 @@
+C:\Users\TJ\source\repos\Miso2025-2\bin\Debug\Miso2025-2.exe.config
+C:\Users\TJ\source\repos\Miso2025-2\bin\Debug\Miso2025-2.exe
+C:\Users\TJ\source\repos\Miso2025-2\bin\Debug\Miso2025-2.pdb
+C:\Users\TJ\source\repos\Miso2025-2\bin\Debug\Miso2025-2.xml
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025-2.vbproj.AssemblyReference.cache
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025_2.Resources.resources
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025-2.vbproj.GenerateResource.cache
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025-2.vbproj.CoreCompileInputs.cache
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025-2.exe
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025-2.xml
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025-2.pdb
+C:\Users\TJ\source\repos\Miso2025-2\obj\Debug\Miso2025_2.Form1.resources

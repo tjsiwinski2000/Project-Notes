@@ -1,0 +1,57 @@
+Finished Lecture.66
+=====================================================
+Research event / context / call back 
+
+Common Usage
+- module.exports.updateTodo=(event,context,callback) 
+
+-event-
+In AWS Lambda, the event object represents the input to your Lambda function. 
+It's automatically passed in by AWS when the Lambda function is invoked. 
+Its structure varies depending on how your Lambda is triggered.
+
+-context-
+In AWS Lambda, the context object contains runtime information about the Lambda function execution. 
+AWS automatically provides it when your function is invoked.
+You rarely need to use it for basic tasks, but it becomes helpful for advanced scenarios like logging, timeouts, or function metadata.
+
+-callback-
+In AWS Lambda (specifically in Node.js), 
+the callback is a function provided by the Lambda runtime 
+that you call to signal that your function is done—whether it succeeded or failed.
+========================================================
+========================================================
+
+ERROR: Unexpected token u in JSON at position 0
+//line below provide by instructor 
+const data=JSON.parse(event.body);
+
+// TJS: lines below address parse issue and [AID TROUBLESHOOTING]  NOTE: sometimes body is another layer, sometimes not
+const sResponse=JSON.stringify(event, null, 2)
+console.log("SHOW-PAYLOAD:", sResponse)
+const sResponseJSON= JSON.parse(sResponse);
+console.log("SHOW-PAYLOAD-BODY:", sResponseJSON.body);
+const data = JSON.parse(sResponseJSON.body)
+console.log("SHOW-PARSED-PAYLOAD" ,data.to ,data.from, data.subject, data.message )
+//console.log("event.pathParameters.id:",event.pathParameters.id)
+
+========================================================
+========================================================
+
+ERROR:
+"errorType": "TypeError",
+"errorMessage": "Cannot read properties of undefined (reading 'id')",
+IDEA: console.log(event.pathParameters.id)
+Note: this might be "victim" of other errors, self resolved
+
+ERROR: An expression attribute name used in the document path is not defined; attribute name: #todo_text
+
+========================================================
+========================================================
+WAS ExpressionAttributesNames: {
+  "#todo_text" : "todo"
+},
+NOW (spelling issue)
+ExpressionAttributeNames: {
+  "#todo_text" : "todo"
+},

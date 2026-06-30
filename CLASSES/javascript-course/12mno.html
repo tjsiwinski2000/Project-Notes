@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter12.Exercises</title>
+
+  </head>
+
+  <body>
+
+    <script>
+        // --12m--------------------------------
+        // Function accepts an array, num returns an array where each element is increased by num
+        function addNum(myarray,num)
+        {
+          return (myarray.map(value => value+num));
+        }
+       
+        console.log(addNum([1,2,3],2));
+
+        // --12n--------------------------------
+        // Function that accepts an array of FOOD returns an array where 'egg' is removed
+        function removeEgg(foods) {
+          return foods.filter((value) => {return value != "egg"})
+        }
+        console.log(removeEgg(['egg','apple','egg','ham']));
+
+
+    </script>
+  </body>
+</html>

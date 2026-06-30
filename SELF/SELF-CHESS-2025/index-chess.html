@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .white-square{
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 15px 15px;
+        border-radius: 0px;
+        margin: 1px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        color: white;
+      }
+
+      .black-square {
+        background-color: rgb(184, 217, 135);
+        border: none;
+        padding: 15px 15px;
+        border-radius: 0px;
+        margin: 1px;
+        font-size: 25px;
+        cursor: pointer;
+      }   
+
+    </style>
+  </head>
+  <body>
+
+    <button class="white-square square-a1" onclick="executeMove('.square-a1');">P</button>
+
+    <button class="black-square square-a2" onclick="executeMove('.square-a2');">P</button>
+
+    <button class="white-square square-a3" onclick="executeMove('.square-a3');">P</button>
+
+    <button class="black-square square-a4" onclick="executeMove('.square-a4');">P</button>
+
+    <button class="white-square square-a5" onclick="executeMove('.square-a5');">P</button>
+
+    <button class="black-square square-a6" onclick="executeMove('.square-a6');">P</button>
+
+    <button class="white-square square-a7" onclick="executeMove('.square-a7');">P</button>
+
+    <button class="black-square square-a8" onclick="executeMove('.square-a8');">P</button>
+    
+    <br>
+    <button class="black-square square-a2" onclick="executeMove('.square-a2');">P</button>
+
+    <button class="white-square square-a3" onclick="executeMove('.square-a3');">P</button>
+
+    <button class="black-square square-a4" onclick="executeMove('.square-a4');">P</button>
+
+    <button class="white-square square-a5" onclick="executeMove('.square-a5');">P</button>
+
+    <button class="black-square square-a6" onclick="executeMove('.square-a6');">P</button>
+
+    <button class="white-square square-a7" onclick="executeMove('.square-a7');">P</button>
+
+    <button class="black-square square-a8" onclick="executeMove('.square-a8');">P</button>
+    
+    <button class="white-square square-a7" onclick="executeMove('.square-a7');">P</button>
+
+
+    <script>
+      // The word "toggle" means turn on/off.
+      function executeMove(selector) {
+        const button = document.querySelector(selector);
+        if (!button.classList.contains('is-toggled')) {
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>

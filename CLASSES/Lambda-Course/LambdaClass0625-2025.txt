@@ -1,0 +1,29 @@
+0624-2025 2:55pm Error sls deploy
+Deploying final-aws-node-todo to stage dev
+CREATE_FAILED: CustomApiGatewayAccountCloudWatchRole (Custom::ApiGatewayAccountRole)
+Received response status [FAILED] from custom resource. Message returned: The role with name serverlessApiGatewayCloudWatchRole cannot be found. See details in CloudWatch Log: 2025/06/24/[$LATEST]c642de2234ad4d90b75c08fe134921a4 (RequestId: a088a0a9-a471-411c-9ae4-44d09fa349de)
+
+[CHATGPT]Option 2: Set It Up Manually via IAM
+You can manually create a role named serverlessApiGatewayCloudWatchRole and attach the following policy:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+Then update the API Gateway settings to use this role.
+======================================
+sls deploy
+POST Endpoint
+- https://p2l5ufcg2k.execute-api.us-east-1.amazonaws.com/dev/todos
+{
+  "todo": "Finish course 3:36pm"
+}

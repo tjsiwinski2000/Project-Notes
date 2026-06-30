@@ -1,0 +1,74 @@
+<html >
+<head>
+    <title>My Animal Website</title>
+    <style>
+      img {
+        width: 300;
+      }
+      animalFacts {
+        color: #86C232;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+		    margin-top: 20px;
+      }
+    </style>
+</head>
+<body>
+  <h1>My Animals</h1>
+  <p>I'm hosted on Amazon S3!</p>
+  <img onclick="alert('tiger');showFacts('tiger')" src="tiger.jpg">
+  <img src="chameleon.jpg" >
+  <img src="cardinal.jpg">
+  <img src="giraffe.jpg">
+  <img src="dragon-fly.jpg">
+  <img src="blue-frog.jpg">
+  <img src="0231a8be-eda3-4fed-80b6-050dc80f7067.jpg">
+<img src="angry-bird.jpg">
+<img src="bird-white.jpg">
+<img src="Black-Mamba.jpg">
+<img src="blue-frog.jpg">
+<img src="cardinal.jpg">
+<img src="Catfish.jpg">
+<img src="chameleon.jpg">
+<img src="cute-dog.jpg">
+<img src="dragon-fly.jpg">
+<img src="Emperor-Penguin.jpg">
+<img src="girafees.jpg">
+<img src="giraffe.jpg">
+<img src="Harles-Mole-Rat.jpg">
+<img src="IMG_1698.JPG">
+<img src="IMG_2237.JPG">
+<img src="IMG_2238.JPG">
+<img src="IMG_2254.JPG">
+<img src="IMG_2257.JPG">
+<img src="IMG_2639.jpg">
+<img src="IMG_2643.jpg">
+<img src="IMG_2651.jpg">
+<img src="Leaf-Cutter-Ants.jpg">
+<img src="lizard.jpg">
+<img src="panda.jpg">
+<img src="panda2.jpg">
+<img src="possum-family.jpg">
+<img src="Red-Panda.jpg">
+<img src="rhino.jpg">
+<img src="small-catfish.jpg">
+<img src="squirrel.jpg">
+<img src="striped-rafael-catfish.jpg">
+<img src="tiger-housron.jpg">
+<img src="tiger.jpg">
+<img src="trio-zebra.jpg">
+<img src="white-bird2.jpg">
+<img src="woodstock.jpg">
+<img src="zebra.jpg">
+<img src="ZebraJungle.jpg">
+  <div class="animalFacts"></div>
+</body>
+
+<script>
+  function showFacts(x) {
+    let text="Renowned for their strength, beauty, and ferocity, tigers (Panthera tigris) are the largest members of the cat family in the world. <br>Tigers are found in the grasslands, swamps, forests, and taiga of Asia, as far north as Siberia and as far south as Sumatra. Different subspecies of the tiger live in different parts of the continent and are adapted to these different environments. <br>Sadly, these amazing animals are endangered throughout their range, facing threats of poaching, habitat loss, human-wildlife conflict, and climate change. Tigers are also often held in <br>captivity in poor conditions, including in tiger farms, where they are exploited to supply the illegal live animal trade. "
+    document.querySelector('.animalFacts').innerHTML=x +"<br>" + text;
+  }
+</script>
+</html>

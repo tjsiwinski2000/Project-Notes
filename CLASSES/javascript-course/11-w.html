@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+
+  </head>
+
+  <body>
+    
+    <script>
+        // create function returns 
+        //  - an array each string appears once
+        function unique(arrayIn){
+          let returnArray=[]
+          for (let i=0; i < arrayIn.length; i++) {
+            if (returnArray.includes(arrayIn[i])){
+              ;
+            }
+            else{
+              returnArray.push(arrayIn[i]);
+            }
+          } //for
+          return returnArray;
+        }
+
+        console.log(unique(['green','green','green','red','blue','red']));
+
+        function uniqueApprovedSolution(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          const word = array[i];
+
+          // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // result array. If it's not in the result array
+          // (index is -1), then add it to the result array.
+          if (findIndex(result, word) === -1) {
+            result.push(word);
+          }
+        }
+        return result;
+      }
+
+      console.log(uniqueApprovedSolution(['green','green','green','red','blue','red']));
+
+    </script>
+  </body>
+</html>

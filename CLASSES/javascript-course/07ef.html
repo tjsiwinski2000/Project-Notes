@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      
+      function convertToFahrenheit(inputCelsius){
+        return ((inputCelsius*9/5)+32)
+      }
+
+      function greeting(){
+        const now=  new Date();
+        const hours = now.getHours();
+        console.log ("in greeting", hours)
+        if (hours <12) {return "Good Morning"};
+        if ((hours > 12) && (hours < 18)) {return "Good Afternoon"};
+        if ((hours >18) && (hours < 24)) {return "Good Evening"};
+
+        return 
+      }
+      console.log(convertToFahrenheit(0));
+      console.log(convertToFahrenheit(100));
+      console.log(greeting());
+    </script>
+  </body>
+</html>

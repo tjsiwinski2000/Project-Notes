@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+
+  </head>
+
+  <body>
+    
+    <script>
+      /* 0328-2025
+         i had some drama with this [note:(i === 0) three "="]
+         result is an object!, key:value pair.
+      */
+      const nums = [-2, -1, 0,99,100];
+      const minMaxObject= minMax(nums);
+      console.log(minMaxObject);
+      console.log(typeof(minMaxObject));
+
+      function minMax(array){
+        // initialize object
+        const result={min:0, max: 0};
+        for(let i=0; i < array.length; i++){
+          let currentNum=array[i];
+          if(i ===0){
+            min=currentNum;
+            max=currentNum;
+          } 
+          else{
+            if (currentNum > max){ max=currentNum;}
+            if (currentNum < min){ min=currentNum;}
+          }
+        }
+        result.max=max;
+        result.min=min;
+        return result 
+      } //function
+
+    </script>
+  </body>
+</html>

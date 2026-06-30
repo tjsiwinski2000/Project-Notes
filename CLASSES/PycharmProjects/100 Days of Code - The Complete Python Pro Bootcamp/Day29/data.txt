@@ -1,0 +1,8 @@
+tjsiwinski_2000@yahoo.com|cnn.com|foo
+tjsiwinski_2000@yahoo.com|amazon.com|foo_amazon
+tjsiwinski_2000@yahoo.com|joe.co|fooojoee
+tjsiwinski_2000@yahoo.com|cnn.com|foofoo
+tjsiwinski|tv.com|foofoo
+tjsiwinski_2000@yahoo.com|foo.com|foofoofoopassword
+tjsiwinski_2000@yahoo.com|cnn|Bu#N7!#3ma+hO7y
+tjsiwinski_2000@yahoo.com|cnn|d5#$A0p%eblHt

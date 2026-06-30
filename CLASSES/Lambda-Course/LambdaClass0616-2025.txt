@@ -1,0 +1,39 @@
+Lesson 51 
+- issue with Lambda function NOT being triggered
+- examined trigger in detail (note: created by Serverless)
+- - looking for *.png (not jpg or PNG)
+- - also issue with ACL (cloud watch logs helped pinpoint error)
+
+ACL ISSUE
+    Find your S3 bucket and click permissions
+    Find object ownership and click edit
+    Click [ACLs Enabled] as this gives power to other accounts to import objects. Please beware of the security implications.
+    [https://aws.plainenglish.io/s3-error-accesscontrollistnotsupported-358cc5b27e15]
+    This change enables Access control list (ACL) [edit]  to be enabled.
+
+    Then 
+    - ACL [edit] everyone (/) read
+    - but seems like this was NOT needed so I unchecked it 
+    - confirmed everything worked after the second change.
+
+===================================
+*To configure the Amazon S3 trigger (console)*
+Open the Functions page
+
+of the Lambda console and choose your function (CreateThumbnail).
+
+Choose Add trigger.
+
+Select S3.
+
+Under Bucket, select your source bucket.
+
+Under Event types, select All object create events.
+
+Under Recursive invocation, select the check box to acknowledge that using the same Amazon S3 bucket for input and output is not recommended. You can learn more about recursive invocation patterns in Lambda by reading Recursive patterns that cause run-away Lambda functions
+
+in Serverless Land.
+
+Choose Add.
+
+When you create a trigger using the Lambda console, Lambda automatically creates a resource based policy to give the service you select permission to invoke your function.

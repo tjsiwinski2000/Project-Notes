@@ -1,0 +1,12 @@
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\bin\Debug\SELF-QUICK-TIMER.exe.config
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\bin\Debug\SELF-QUICK-TIMER.exe
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\bin\Debug\SELF-QUICK-TIMER.pdb
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\bin\Debug\SELF-QUICK-TIMER.xml
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF-QUICK-TIMER.vbproj.AssemblyReference.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF_QUICK_TIMER.Form1.resources
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF_QUICK_TIMER.Resources.resources
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF-QUICK-TIMER.vbproj.GenerateResource.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF-QUICK-TIMER.vbproj.CoreCompileInputs.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF-QUICK-TIMER.exe
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF-QUICK-TIMER.xml
+C:\Users\TJ\source\repos\Project-Notes\SELF-QUICK-TIMER\obj\Debug\SELF-QUICK-TIMER.pdb

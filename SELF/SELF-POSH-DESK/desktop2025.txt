@@ -1,0 +1,11 @@
+﻿tjsiwinski_2000@yahoo.com
+#suggestion
+tjcloud1965@yahoo.com
+tjsiwinski2000
+Remove-Item .\index.zip;Compress-Archive -Path  .\index.html, .\main-animals-2025.css, .\retrieve-all-records.js, .\mammal.html, .\reptile.html, .\bird.html, .\fish.html, .\add-edit-form-engine.js, .\page-load-index.js, .\page-load-genre.js -DestinationPath  index.zip
+ssh -i .\08212025kp.pem ec2-user@54.176.109.45
+07/01/1983
+05/27/1987
+Michael Ballew
+Thaddeus Siwinski
+Jacob Divan

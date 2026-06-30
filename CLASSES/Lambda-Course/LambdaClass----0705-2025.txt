@@ -1,0 +1,49 @@
+3:10pm created , verified SES identity tjsiwinski_2000@yahoo.com
+arn:aws:ses:us-east-1:396913707603:identity/tjsiwinski_2000@yahoo.com
+
+=============================
+=============================
+Lecture.77 [sls info]  - good syntax to remember
+
+TJS: logged into "dashboard", requires serverless login (Firefox cached), interesting but nothing helpful shown on dashboard.
+=====================================================
+ERROR Deploying final-aws-ses-email to stage dev (us-east-1)
+Warning: Invalid configuration encountered
+  at 'functions.create.events.0': unsupported function event
+  at 'provider.iam': unrecognized property 'roles'
+
+PROVIDED.UDEMY.FAIL
+iam:
+roles:
+  statements:
+
+WORKING.ChatGPT.THANKYOU
+iamRoleStatements:
+- Effect: Allow
+  Action:
+    - "ses"
+=====================================================
+ERROR "message": " to or from... are not set properly!"
+- postman [https://1ph56wdyfh.execute-api.us-east-1.amazonaws.com/dev/post/contact-us]
+{
+  "to" : "summersdad2015@gmail.com",
+  "from" : "tjsiwinski_2000@yahoo.com",
+  "subect": "Hello World",
+  "message": "Are you there?"
+}
+CLOUD LOGS
+-2025-07-05T21:01:56.261Z	0f675e5b-552b-4d44-9aa9-eaa3a4405576	INFO	
+- IDEA - PARSING IS NOT DEEP ENOUGH SIMILAR TO OTHER Lambda Functions
+Received::: {
+  resource: '/post/contact-us',
+  path: '/post/contact-us',
+  httpMethod: 'POST',
+  headers: {
+    Accept: '*/*',
+  ...
+  body: '{\r\n' +
+  '    "to" : "summersdad2015@gmail.com",\r\n' +
+  '    "from" : "tjsiwinski_2000@yahoo.com",\r\n' +
+  '    "subect": "Hello World",\r\n' +
+  '    "message": "Are you there?"\r\n' +
+  '}',

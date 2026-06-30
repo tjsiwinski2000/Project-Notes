@@ -1,0 +1,25 @@
+0505-2025
+WHERE ARE ANIMAL PICS
+C:\Users\TJ\Documents\SmileyRachel.com\posted
+
+WHY AMAZON BILL HIGH
+- deleted EC2 instance from 0407
+- deleted lightsail instance
+
+NEW S3 BUCKET
+0505-2025-animals -> website via amplify [applied smileyrachel.com]
+https://www.youtube.com/watch?v=hpP6dNJ16-0
+amplify website : s3 connect
+(435pm still configuring smileyrachel.com)
+Leviticus 11:29,30 “‘These are the swarming creatures of the earth that are unclean to you: the mole rat, the mouse, every kind of lizard,30 the gecko, the large lizard, the newt, the sand lizard, and the chameleon.
+
+05062025
+amplify website + smileyrachel.com is monkeyed up [need reserve time to troubleshoot]
+
+Article: https://shorturl.at/oWCNb
+Purpose: trying to use API Gateway connect existing DynamoDB
+ARN: arn:aws:dynamodb:us-west-1:396913707603:table/0502-2025
+Created IAM Policy: Connect-0502-2025
+Created Role: 		API-Role-0502-2025
+API-Actual-0502-2025
+- sadly couldn't get it to work switching to Lambda

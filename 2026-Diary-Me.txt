@@ -1,0 +1,413 @@
+ThisWeek - next training regime
+         - next self assigned project
+
+Daily 
+- do 2/3 TTTT videos https://www.youtube.com/watch?v=W6jQmVi31Xk
+- https://docs.google.com/document/d/1H1t_pELy0kbE0WEAEWuA0nFhs07Aw2ohF8EcF3Cixl0/edit?tab=t.0
+0203-2026
+python C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course\05_Projects\0203-20206-D.TJ\0203-2026-start.py
+0202-2026
+- add login capability to PROD
+- learned much (filter = userid) ; user = session.get('user','not')
+
+0131-2026
+- busy week learned sqlite and deployed to Cafe-It web
+- added four coffee shops to sqlite
+- preliminary work on login capability folder ..\flask_deploy_2026\0131-2026-login
+
+0125-2026
+- deployed cafe-it web to //tjsiwinski2000.pythonanywhere.com/
+0123-2026
+- https://tjsiwinski2000.pythonanywhere.com/ established
+- learned how to deploy basic flask application to pythonanywhere infra 
+- - -  zip/unzip/cp file/ update config file 
+
+0122-2026
+- finished tic tac toe 
+- separate repository 
+https://github.com/tjsiwinski2000/tic_tac_toe_2026
+
+0120-2026
+- downloaded POSTMAN desktop agent
+- FLASK API lesson 66 integrated with POSTMAN
+- python C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course\09_Hacker_Rank\0120-2026-timer.py
+
+0119-2026
+- created https://tinyurl.com/don1914 to help Don with temperatures
+- East1 Lambda and Website.
+
+
+0118-2026
+- spend a week on FLASK and BOOTSTRAP (interesting)
+- make a sample website ? IDK 
+- REST API was also in python plan document
+
+0107-2026
+- couple days on HackerRank see [Project-Notes\CLASSES\Python-Crash-Course\09_Hacker_Rank]
+- spend one weeek on UDEMY class learn FLASK 54- 58 
+
+0106-2026
+- overall moving forward , new approach 
+---do a week of python CrashCourse
+---a week of udemy
+---start HackerRank
+
+0102-2026
+- generally making progress
+- frustrate with CrashCourse ex.pg263, otherwise making progress
+- UDEMY skipped some HTML lessons to do beautiful soup Day 45
+- Review exercise are going well however.
+
+1226-2025
+- 1224 : one hour review python
+- 1225 : one hour review python 
+- 1226 : four hours python 
+
+1222-2025
+- Decide to forego Snorkel AI for a bit a)get more python exposure b)12/22 submission hiatus c)too many fronts 
+- Big GIT update [1222-2025-big-update] , addressed dependabot warnings (Course Content Crash Course)
+- Did POM 1222-2025 and cmd line cleaned up resources created.  (accidently ❌ api: 37t94ob8c5)
+
+1215-16-2025
+- ✅ Python Day 38
+- deleted joseph.siwinski.2025@gmail.com
+- removed accesss to sheety
+- SUPER-REVIEW-DAY and organized C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course into [8 folders]
+- python -m pip install --upgrade pip 
+- added c:\users\tj\appdata\roaming\python\python313\site-packages to environment PATH
+- [CrashCourse:p213] pytest installed/ran
+- [C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course\course-files\chapter_11]
+WHAT IS HackerRank (Python section)
+
+1214-2025
+- ✅ Python Day 37, Day 38
+- weirdness with request module in CODIUM , recorded fix in Python.Notes.2025
+
+1206-07-2025
+- ✅ Python Day 35, Day 36.Stock Viewer 
+
+1203-05-2025
+- Weather SMS SELF
+- 📄C:\Users\TJ\source\repos\Project-Notes\SELF\SELF-WEATHER-SMS-1205-2025
+
+1201-02-2025
+- https://jsonviewer.stack.hu/ useful for JSON blobs
+- ✅ Python Day 34, start 35.
+- using Lambda->API->amplify for https://opentdb.com/
+
+
+1127-30-2025
+- POM again
+- ✅ Python Day 31, 32, 33
+- API Lambda=>API=>Amplify: https://staging.d268q7tuqzok3i.amplifyapp.com/
+
+1126-2025
+- POM good notes, slowly automating deletion
+- 1126-2025-pass-obfuscator.py with example password.2
+
+1118-2025
+- POM did twice , took notes, need to do more often, perhaps completely remote
+- created python C:\Users\TJ\source\repos\Project-Notes\CLASSES\Python-Crash-Course\do_daily.py
+
+1117-2025
+- ✅ Python Day 30 
+- start Python fun calendar project
+- need to get back with AWS 
+- 1117-2025b-POM :: tried to download / edit locally
+- schedule one day a week for UpWork???
+
+1114-2025
+-Bought connects from UpWork (mets)
+-Verified Identity, Saved Visa
+-Bid on restuarant job (upwork.com/jobs/~021989065869427798466 $50/hour)
+
+1027-2025
+-Python Day 25 - Panda!
+-Crash Course continued
+Making progress but it will be a journey 
+1025-2025
+-Python Day 24 file io 
+-Crash Course few pages
+-Python web scraping with beautiful soup etc.. [1025-205-web-scraper.py]
+1023-2025
+-Python Day 23 turtle crossing game
+
+1020/1021-2025
+- Python Days 21,22 finish
+- Update Lambda Functions to python 3.12
+aws lambda update-function-configuration --function-name %function-name-here% --runtime python3.12 --region us-east-1
+# Check function state
+aws lambda get-function-configuration  --function-name %function-name-here% --region us-east-1 
+
+1016/1017-2025
+- Python Day19,20 finish
+- continue Python Crash Course Tome 
+- slowly working on AI certification, create note cards [keep on desk]
+- git acting strange form VSCodium, maybe pycharm interference?
+- git from cmd line working ... remove_daily_inspiration_from_Lambda_class_downloads due to vulnerabilities
+
+1014-2025
+- Python Day18 finish, ?did I spend to much time on Turtle() art?
+- continue Python Crash Course Tome 
+
+1011/1012-2025
+- Python Day17, start 18
+- started Python Crash Course Tome (30min) 
+- Monk Mode 2 hours / top monitor split [udemy][notes] bottom montior [python]
+1010-2025
+- POM 14:55 and clean up 
+
+1008/1009-2025
+- Python Day 16 completed
+- AI Quiz Review
+- PowerOfMath 
+
+1007-2025
+- Python Day 15 completed, deep dive on solution
+- AWS AI Quiz2 WhizLab
+- AWS SNS: https://www.youtube.com/results?search_query=aws+send+text+if+new+user+created
+
+1003/1006-2025
+- Python 14 completed, Day 15 progress
+- AWS AI restarted
+
+1002-2025
+- Python Day 14 progress
+
+0929/0930-2025
+- AWS Sec issue
+- Python Day12, Day13, [Thonny installed Python debugger]
+
+0922/0926-2025
+- AWS Sec issue mainly
+- Some Python, progress Day 11
+- Lot of prayer honestly...
+
+0920/0921-2025
+- [UDEMY Python BootCamp] upto Day10
+-Add FunFacts-Phase3 to GRID-PHASE2 [ANIMALS]
+-AWS Sec Issue exposed key in github / changed root password / 
+
+0918/0919-2025
+-[UDEMY Python BootCamp] upto Day8,9
+-Add FunFacts-Phase2 to GRID-PHASE2 [ANIMALS]
+
+0916-2025
+- AI Quiz Udemy Sections 1-10
+- [UDEMY Python BootCamp]  Day6,7 #maybe2much
+
+0913/0915-2025
+- Continue [UDEMY Python BootCamp] upto Day5
+- AI WhizLab  pass Quiz1
+- Add FunFacts-Phase1 to GRID-PHASE2 [ANIMALS]
+
+0909/0912-2025
+- Start [UDEMY Python BootCamp]
+- Continue AI studies
+
+0908-2025
+- Studied for AI certifcation
+- Created an account on Fiverr https://pro.fiverr.com/  [confused on how to sell my services or worth it ?]
+- https://shorturl.at/mxTeq
+
+0904/0906-2025
+- GRID-PHASE2 [ANIMALS] main page + genre pages working (/)
+- Need to get zoom JS working and animal fun facts.
+- [UDEMY AWS AI COURSE], [WhizLab]  working toward certifcation 
+
+0902-2025
+- getting back in the swing after [INTERVIEW WEEK HEB]
+- GRID-PHASE2 [ANIMALS] modularize JS for efficient reuse [MILESTONE]
+- [UDEMY AWS AI COURSE] slowly prepping for certification test 
+
+0823/0824-2025
+- GRID-PHASE2 [ANIMALS]; divide HTML, CSS, JS separate files, separate code more functions
+- Purchase practice exams WhizLab for AI test
+
+0821/0822-2025
+- [UDEMY AWS AI COURSE]
+- used gemini to build some practice questions for AI test
+- GRID-PHASE2 [ANIMALS]; major victory (/) HERO shots displaying, (x) zooming not working tho.
+
+0820-2025
+- [UDEMY AWS AI COURSE]
+- used gemini to build some practice questions for AI test
+- GRID-PHASE2 [ANIMALS]; making progress , edit working 100% , css separate file.
+
+0818/0819-2025
+- [UDEMY AWS AI COURSE]
+- little drama with root password maybe sign in weekly?
+- continue GRID-PHASE2 [ANIMALS]; making progress
+
+0813/0814/0815-2025
+- [UDEMY AWS AI COURSE]
+- Redid PowerOfMath 3x
+- Review WhizLab.PracticeTest.2
+
+0811/0812-2025
+- [UDEMY AWS AI COURSE]
+- Amazon Q is your friend
+details C:\Users\TJ\source\repos\Project-Notes\AWS-PowerOfMath01212025\ReadMe08-12-2025.txt
+details2 curl -X OPTIONS https://k69he7juse.execute-api.us-east-1.amazonaws.com/DEV/my-resource -H "Origin: your-domain.com" -v
+
+0805/0807-2025
+- [UDEMY AWS AI COURSE]
+- review AWS concepts with WhizLab course and documented https://shorturl.at/CMnND
+- start GRID-PHASE2
+
+0803/0804-2025 [post PSS]
+- restarted [UDEMY AWS AI COURSE]
+- continued [Deep Dive into LLMs like ChatGPT]
+- research own business idea perhaps use digital ocean for simiplicty 
+https://drive.google.com/drive/folders/10TnT_IIsPlJuz2fTIKgTTwV1nNG-5Fsr
+
+0724/0726-2025
+- started [UDEMY AWS AI COURSE]
+- Studying Deep Dive into LLMs like ChatGPT
+- Glean ideas for GRID project next level
+
+0721/0722-2025
+- progress CP course update //skillbuilder.aws/learn/94T2BEN85A
+- GRID project update and edit working well.
+
+0716/0717-2025
+-  GRID PROJECT (/) show all  (/) edit SUCCESS !
+-  Recorded lessons learned from getting editing working in ReadMe.txt
+-  progress CP courset update //skillbuilder.aws/learn/94T2BEN85A
+
+
+0715-2025 
+-goal GRID get editing working
+- two hours UDEMY
+- one hour review
+
+0713/0714-2025
+- [Udemy: Lambda Class]  thr. Lecture.80 
+- typos are [Killing Me Smalls]
+- progress CP courset update //skillbuilder.aws/learn/94T2BEN85A
+
+0710/0711-2025
+- GRID PROJECT worked thr. COORs issue to show ALL entries on an amplify website
+- GRID         click ID -> JS alert dialogue with Full ID
+- node .\filename.js good for local javascript testing 
+- Lecture.75,76
+
+0709-2025
+- start game plan [GRID PROJECT]
+
+0705/0706/07-2025
+- worked thr. issues with SES in Lecture.70
+- progress CP course update //skillbuilder.aws/learn/94T2BEN85A/aws up to Lesson 8 review
+- notes from ^ here https://shorturl.at/Vlf2M
+
+0704-2025
+- conintue updated CP course from AWS
+- Lecure.69, most Lecture.70nn
+
+0703-2025
+- start update CP course updated https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7
+
+0702-2025
+-TTTT did POM in 15 minutes w/o references
+-One review Quiz
+
+0701-2025
+[Udemy: Lambda Class] 
+- solved some POSTMAN error regarding createTodo.js ; deleteTodo.js working ; listened to Lecture.66
+- review AWS concepts via UDEMY Class
+
+0628/0629/0630-2025
+[Udemy: Lambda Class] 
+- solved several errors, documented in notes :function reference, userid vs id, param declaration..
+- listTodos.js working with API,POSTMAN
+- need to fix all scripts
+
+[JS 0630-2025.htmml]
+- .amazon-button2 {  border-radius: 50px;} remove ";" and border-radius value is not applied
+- one hour review
+[PowerShell]
+- created C:\Users\TJ\source\repos\Project-Notes\Lambda-Course\diary-maker.ps1
+
+0625/0626/0627-2025
+- Recreate Python API adding layer within serverless [ layers:arn:aws:lambda:${self:provider.region}:770693421928:layer:Klayers-p39-pillow:1 ]
+- Why software engineering is no longer a dream job [ https://shorturl.at/yhZJv ]
+- TTT elasticbeanstalk vid https://shorturl.at/rETY3
+
+0624-2025
+- AWS IAM Identity Center is the successor to AWS Single Sign-On (AWS SSO). [Review]
+
+0622/0623-2025
+- [Udemy: Lambda Class] review.58 completed 59-60, attempt 61
+- Lambda Function could be basis for much more ^
+- Progress directory size script
+
+0621-2025
+- [Udemy: Lambda Class] review.54-57 completed.58
+- configure codium for hotlink function names
+- 1 hour directory size POSH script [VB front end???]
+
+0619-2025
+- [Udemy: Lambda Class] review.54 got thr Lecture.57 listen.58
+- [set up https://www.postman.com/] + [chatgpt walk thr. dynamo DB Code]
+- used serverless.yml + API provided => https://nji31g2j3c.execute-api.us-east-1.amazonaws.com/dev/images/all 
+- did POM w/o notes in 20 minutes; good!
+- JS review upto 03-05-2025  || worked on size utilty
+
+0618-2025
+- TTTT Video [Power Of Math Review]
+- [Udemy: Lambda Class] review.53 , got thr Lecture.54 and everything works.
+- File.Preferences.Settings "editor guides"
+
+0617-2025
+- [Udemy: Lambda Class]finish Lecture.52,53 dynamoTable getting updated!
+- Cleaned up some S3 buckets 
+-- odd CANNOT DELETE elasticbeanstalk-ap-northeast-2-396913707603, elasticbeanstalk-us-east-1-396913707603
+- VB Project to get directory sizes :/ 
+
+
+0613/0616-2025
+- [Udemy: Lambda Class]finish Lecture.51, listen.52
+- fixed issues with trigger/permissions documented in: LambdaClass0616-2025.txt
+
+0611-2025
+- JS review one hour
+- [Udemy: Lambda Class]finish Lecture.47 ; listen to Lecture.48
+0610-2025
+- JS open C:\Users\TJ\source\repos\Project-Notes\javascript-course review up to lesson 7
+- [Udemy:Lambda Class] finish Lecture.44 ; listen to Lecture.45
+
+0607/0608/0609-2025
+- [Udemy:Lambda Class] finish Lecture.42
+- Retested AWS 30 Question Cloud Practitioner Test
+
+0606-2025
+- [AWS:Budget Review] 
+- received alert for overage, current =$1.86, cost explorer not available
+
+0605-2025 
+- [Udemy:Lambda Class] finish Lecture.35
+- [TTTT.CodeCrafters] https://www.youtube.com/watch?v=1NiVabKE7Fk
+
+0604-2025 drama with coffee shop and library
+- [Udemy:Lambda Class] finish Lecture.26
+- [TTTT.IAM Basics] [TTTT.EC2 Basics]
+
+0602/0603-2025
+- [Udemy:Lambda Class] finish Lecture.18
+-  https://www.youtube.com/watch?v=iF9fs8Rw4Uo [TTTT.IAM Basics] up to 15 minutes
+
+0530-2025
+- https://www.youtube.com/watch?v=iF9fs8Rw4Uo [TTTT.IAM Basics] [ToDo:good to watch several times]
+- start [Udemy:Lambda Class]
+
+
+0529-2025
+- added MFA to joseph1967 (click +) ; [bottom]::google authenticator
+- Two TTTT basic videos 
+- Lucy [Unspoken Headache of Running Cloud Workload] [Top 5 Trends You NEED to Know]
+- sign up: [Udemy:AWS Lambda and the Serverless Framework - Hands On Learning!]
+
+
+0528-2025
+- determined to use github for daily IT task managment
+- removed [Amazon Lightsail USE1-UnusedStaticIP] from AWS account [$6.74 charge]

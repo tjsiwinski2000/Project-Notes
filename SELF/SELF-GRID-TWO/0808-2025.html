@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Zoom on Hover</title>
+  <style>
+    .zoom-container {
+      overflow: hidden;
+      width: 140px;
+      height: 186px;
+      border: 2px solid #ccc;
+      position: relative;
+    }
+
+    .zoom-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .zoom-container:hover .zoom-img {
+      transform: scale(1.8); /* Zoom level */
+    }
+  </style>
+</head>
+<body>
+  <body>
+
+    <div class="zoom-container">
+      <img src=".\giraffe.jpg" alt="Zoomable Image" class="zoom-img">
+    </div>
+    <script>
+      alert(filterByPageName());
+      function filterByPageName() {
+        // get current page filename (e.g. "fish.html")
+        const path = window.location.pathname;
+        const page = path.substring(path.lastIndexOf('/') + 1); // fish.html
+        const baseName = page.split('.')[0]; // "fish"
+    
+        return baseName;
+      }
+    
+    </script>
+  
+  </body>
+  </html>

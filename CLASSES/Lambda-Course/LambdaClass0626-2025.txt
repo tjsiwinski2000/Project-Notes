@@ -1,0 +1,31 @@
+0626-2025 
+Adding Klayers via serverless.yml so they DONT have to be MANUALLY added
+
+[SOURCE: https://github.com/keithrozario/Klayers]
+Using Serverless Framework
+You can include layers in your deployments, by utilizing the layers property at the function level, and setting it to the arn of your choice. You must use layers from the same region as your function:
+
+check:
+  handler: 02_pipeline/check.main
+  description: Checks for package on PyPi via the API
+  runtime: python3.9
+  timeout: 30
+  memorySize: 256
+  layers:
+  - arn:aws:lambda:${self:provider.region}:113088814899:layer:Klayers-python37-packaging:1
+  - arn:aws:lambda:${self:provider.region}:113088814899:layer:Klayers-python38-aws-lambda-powertools:23
+=====================================
+CHANGE MADE BY TJ 12:45pm
+
+  serverless.yml
+  - find function declaration, below [handler:] add referrence
+  - example
+  handler: handler.delete
+ 
+  
+(/) TESTED AND WORKING
+====================================
+Attempting to discern why deletion requires security token but add does not.
+[SOURCE:chatGPT] What does serverless-python-requirements do?
+This plugin is only responsible for packaging your Python dependencies when deploying a Serverless application (like an AWS Lambda function).
+
