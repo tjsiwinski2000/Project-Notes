@@ -2,7 +2,7 @@
 # Write a one-liner that returns the most frequent element in a list.
 # Print type(intermediate object)
 my_list = ['a','b','c','a']
-# print(max(my_list,key=(my_list.count)))
+# print(max(my_list,key=my_list.count))
 
 # #JSON 
 # 1) output raw content from review_data.json in format below
@@ -51,19 +51,25 @@ string = string[:4] +'k' + string[5:]
 print(string)
 
 s="siwinski"
-# return iksniwis 
-print(s[::-1])
-# return iiiknssw
+
+# iksniwis 
+print(s[::-1]) 
+
+# iiiknssw
 print(''.join(sorted(s)))
-# return siwin
+
+# siwin
 print(s[:5])
+
 # return siwinsk
-print(s[:-1])
 print(s[:7])
+print(s[:-1])
+
+
 
 # list comprehension, make a list for squares of odd numbers 1-100
 print("squares of odd numbers 1 - 100")
-print([n**2 for n in range(1,100,2)])
+# print([n**2 for n in range(1,100,2)])
 
 #list practice reference: 01_Basice_Syntax\list_exercise_1014-2025.py
 #1014-2025 python practice TJS - Python Crash Course
