@@ -1,0 +1,82 @@
+
+It all started innocently enough
+
+With a simple question
+“ I noticed there’s free refills.
+Can I get a refill on my caramel macchiato?”
+
+“Sir, that’s refills are for brewed  coffee you have an actual drink” the Starbucks barista said.
+Then one of her coworkers came over to her and whisper in her ear, but loud enough for me to hear “2007”.
+
+“OK sir, I’ll start working on it right away”
+
+“Wait, what was that 2007? Is that some kind of code”
+
+“You drive the Honda accord 2007.”
+It was a statement not a question
+
+“Yes, but how did you know that?”
+
+“We have cameras outside, sir.”
+
+“ Yes but hundreds of people come to Starbucks all the time”
+
+“ You have not heard of AI”
+“Well, I have, but … “ I started to stammer.
+This was taking a weird turn off the highway of reality.
+
+Her coworker chimed in and smile and told me :
+“ Hey cupcake, just sit down and don’t worry about it. We’ll have your drink out in a minute.” 
+
+I have to admit I was a little surprised at being compared to a confectionary delight by someone old enough or young enough to be my daughter or maybe even my granddaughter.  It reminded me of that TV show with the snippy doctor .
+
+I was still trying to process what actually happened when I collapsed into a seat marked for handicapped.  That was never used for handicapped… should I feel guilty ?
+Wait I am kind of handicapped, I’m completely lost here. Maybe I’m in a parallel universe where the Starbucks staff watches Scrubs  reruns during their management training.
+
+The lady who whispered 2007 to the barista came over.  She looked official and had the body language of someone with authority.
+
+“ You’re confused, aren’t you?”
+“Well, yeah.”
+
+“Yeah, I was too. That was 10 years ago.”
+“You have a 2007 Honda too ?”
+
+“Oh, you are a funny one aren’t you? We get all kinds of recruits.”
+
+“ Recruit . I’m just out of work computer programmer.”
+
+“ Hello, we know that” she cracked her knuckles and winked at her coworker who nearly finished preparing my contraband refill that probably violated  corporate policy somehow and would reduce the profit margin of the local store.
+
+“Wait, how do you know that?”
+
+“ Will you come here with a book on python , pristine at first but still in decent condition. And obviously you don’t know what you’re doing but you’re slowly learning it.
+You take no business calls.
+And you hug all these friends who come in from the ministry like you have all the time in the world because you do. They seem really nice.  We love them.”
+
+“Has Starbucks become a cave of stalkers I asked?   I love them too by the way. “
+
+“ No, we’re just observant for recruits”
+
+“ What’s this recruit thing ? “
+
+Ah pumpkin do you really think it takes 10!people to make coffee ?
+Look !
+
+0709-2026 Top 30 sizes
+[2885189632, 2220883968, 1589641216, 894246037, 433069712, 325349064, 318943232, 284946496, 272420864, 200809238, 186333144, 186333144, 176781560, 176781560, 174086226, 134819840, 127926272, 116502528, 113953669, 113945029, 100663296, 100600429, 100340679, 99424813, 89695216, 89695216, 89218588, 82428835, 82165760, 79853014]
+
+sizes=[]
+with open("c:\\filesizes.txt") as f1:
+...     for line in f1:
+...         size = line.split(' ')[0]
+...         sizes.append(size)
+
+
+int_list = [int(x.strip()) for x in sizes if x.strip()]
+top_30 = sorted(int_list, reverse=True)[:30]
+print(top_30)
+*****TODO 10PM 0709-2026*****
+close fire fox and 
+del "C:\Users\TJ\AppData\Local\Mozilla\Firefox\Profiles\ukn8fpgh.default-release\remote-settings\quicksuggest-amp.sql"
+see if it comes back
+write script to return files of top 30 sizes

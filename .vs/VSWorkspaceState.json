@@ -1,5 +1,10 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\SELF-QUICK-TIMER.sln",
+  "ExpandedNodes": [
+    "",
+    "\\SELF",
+    "\\SELF\\2026-Timer",
+    "\\SELF\\Time-2026"
+  ],
+  "SelectedNode": "\\SELF\\Time-2026\\Form1.vb",
   "PreviewInSolutionExplorer": false
 }

@@ -1,8 +1,23 @@
+#07122026
+# Write one-liner to return [1, 2, 3, 4, 5, 6, 7, 8, 9]
+nested =[[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+print([num for sublist in nested for num in sublist])
+
+# Write one line to return second highest num
+my_list = [2, 3, 6, 6, 5]
+print(list(set(sorted(my_list)))[-2])
+# use zip to return [(1, 'a'), (2, 'b'), (3, 'c')]
+numbers = [1, 2, 3]
+letters = ["a", "b", "c"]
+print(list(zip(numbers,letters)))
+
+
 #04062026
 # Write a one-liner that returns the most frequent element in a list.
 # Print type(intermediate object)
 my_list = ['a','b','c','a']
-# print(max(my_list,key=my_list.count))
+print(max(my_list,key=my_list.count))
+
 # #JSON 
 # 1) output raw content from review_data.json in format below
 # key: amazon e-mail: tjsiwinski_2000@yahoo.com
@@ -13,18 +28,18 @@ my_list = ['a','b','c','a']
 # HINT must either LOAD or DUMP json to get it into a variable.
 json_file_name = 'review_data.json'
 import json
-with open(json_file_name ) as f1:
-    my_dict = json.load(f1)
+# with open(json_file_name) as f1:
+#     data = json.load(f1)
 
-print(my_dict)
-print("*" * 40)
-my_dict["joe3"] = {"name": "Alice", "role": "Engineer", "salary": 95000}
+# data["333"]= {"name": "Eli", "role": "Developer", "salary": 88000}
+# # print(data)
 # with open(json_file_name,mode='w') as f2:
-#     json.dump(my_dict,f2)
+#     json.dump(data,f2)
 
-print(my_dict)
+# print(data)
 
 
+# print(data)
 # given p11 exercise 06-11
 cities_dict ={
     "San Diego": {
@@ -43,19 +58,27 @@ cities_dict ={
         "fact": "Art Institue is awesome"
     }
 }
+for city, city_info in cities_dict.items():
+    print(f'{city}\n\t{city_info['country']}\n\t{city_info['fact']}')
 #================================================================
 string = "abracadabra"
+print(string)
 # print 5th character in the string
+print(string[4:5])
 # change 5th character from a to k using slice
+string=string[:4]+'k'+string[5:]
+print(string)
 
 s="siwinski"
 # return iksniwis 
+print(s[:-1])
 # return iiiknssw
+print(''.join(sorted(s)))
 # return siwin
-
+print(s[:5])
 # list comprehension, make a list for squares of odd numbers 1-100
 print("squares of odd numbers 1 - 100")
-print("")
+print([num**2 for num in range(1,100,2)])
 
 #list practice reference: 01_Basice_Syntax\list_exercise_1014-2025.py
 #1014-2025 python practice TJS - Python Crash Course
@@ -65,25 +88,34 @@ cant_make="Abraham Lincoln"
 first_alternate="Rafael Nadal"
 # remove cant_make , add first_alternate @end,  add first_alternate in middle
 
-
+print(my_list)
+my_list.remove(cant_make)
+location_in_list = len(my_list)//2
+my_list.insert(location_in_list,first_alternate)
+print(my_list)
 
 # slicing a list reference:01_Basice_Syntax\ist_slicing_1017-2025.py
 players = ['Rafa', 'Roger', 'Joker', 'Murrary']
 # print out Roger, Joker only
+print(players[1:3])
 
 # dictionary practice reference:01_Basice_Syntax\dictionary_practice_1021-2025b.py
 fruits = {"apple":2, "pear" : 1, "pineaple" : 3, "peach" : 1 , "zebra" : 0 }
 # return fruit with highest key e.g. pineapple 3
+print(max(fruits,key=fruits.get))
 # return fruit with "highest" name  e.g. zebra 
+print(max(fruits))
 
 my_list=['zebra','cow','fox','chicken']
 # Make 10 random choices from the above list reference: 01_Basice_Syntax\list_randomization_1022-2025.py
-
+import random
+# for count in range(1,11):
+#     print(f'{count}.{random.choice(my_list)}')
 
 #Dictionary Comprehension reference: 01_Basice_Syntax\dict_comprehension_1104-2025b.py
 sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
 #desired output {'What': 4, 'is': 2, 'the': 3, 'Airspeed': 8, 'Velocity': 8, 'of': 2, 'an': 2, 'Unladen': 7, 'Swallow?': 8}
-
+print([f'{word} : {len(word)}' for word in sentence.split(' ')])
 # dictionary practice
 my_dict ={
     "TJ" : "python",
@@ -92,22 +124,26 @@ my_dict ={
 }
 
  #1.{'TJ': 'python', 'David': 'coffe_talk'}
-print(f"raw dictioinary\n")
+# print(f"raw dictioinary\n")
+# print(my_dict)
 
-#2.sorting a dictionary(Keys)
-print("")
+# #2.sorting a dictionary(Keys)
+# print(sorted(my_dict.items()))
 
-#3.dictionary try,catch
-print("")
+# #3.dictionary try,catch
+# print(my_dict.get('Eric Love', 'bro DNE'))
 
-#4.list values only (in order of insertion)
-print("Values only in order of insertion:")
+# #4.list values only (in order of insertion)
+# print("Values only in order of insertion:")
+# print([value for value in my_dict.values()])
 
-#5.list values only (sorted)
-print("Values only sorted:")   
+# #5.list values only (sorted)
+# print("Values only sorted:")   
+# print([value for value in sorted(my_dict.values())])
  
-#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ
-print("Values only in order of sorted keys")   
+# #6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ
+# print("Values only in order of sorted keys")   
+# print([my_dict[key] for key in sorted(my_dict.keys())])
 #================================================================
 #================================================================
 
@@ -115,6 +151,7 @@ print("Values only in order of sorted keys")
 
 #================================================================
 #================================================================
+import os,requests,json
 NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
 NEWS_URL = "https://newsapi.org/v2/everything"
 
@@ -126,11 +163,13 @@ parameters = {
 response = requests.get(url=NEWS_URL, params=parameters)
 response.raise_for_status()
 # assign data variable the contents of the "article" key 
-
+data = response.json()['articles']
 # print the first three articles
+# print(data[:3])
 
 #print  article author, title , url for first three articles
-
+for article in data[:3]:
+    print(f'{article['title']}\n\t{article['author']}\n\t{article['url']}')
 #================================================================
 #================================================================
 # practice review , open file1,file2, create list of numbers in both, create list of numbers in 1, but not 2
@@ -141,6 +180,16 @@ list3 = []
 list4 = []
 file_name1 = "review_ex_nums1.txt"
 file_name2 = "review_ex_nums2.txt"
+
+with open(file_name1) as f1:
+    for line in f1.read():
+        list1.append(line.removesuffix('\n'))
+        
+with open(file_name2) as f2:
+    for line in f2.read():
+        list2.append(line.removesuffix('\n'))
+
+print(f'Numbers in both:  {[int(num) for num in list1 if num in list2 and len(num) > 0]}')
 #================================================================
 #================================================================
 ##pg162 Crash Course => complete the class method to show all attributes dynamically
@@ -154,7 +203,9 @@ class User:
     
     def describe_user(self):
         #print all attributes of user to screen 1130-2025-learning.py if stuck
-        pass
+        for key,value in self.__dict__.items():
+            print(f'{key} : {value}')
+            
         
 
 test_user = User("TJ", "Siwinski", "00001", "male", "freshman")
@@ -168,13 +219,19 @@ confirmed = []
 # remove all the 'a's with for loop
 letters = ['a', 'b', 'a', 'c', 'a' , 'd']
 print(letters)
+while 'a' in letters:
+    letters.remove('a')
+print(letters)
 
 #CrashCourse p146 ex8-9,8-10,8-11
 # create function show_messages , pass a list, send messages, show resultant list part B: pass a copy of the list 
 messages=["Dude", "Bruh", "Seriously", "That's Monk"]
 sent_messages=[]
-
-
+print(f'BEFORE\n\tmessages:{messages}\n\tsent_messages:{sent_messages}')
+while messages:
+    sent_messages.append(messages.pop())
+    
+print(f'AFTER\n\tmessages:{messages}\n\tsent_messages:{sent_messages}')
 #================================================================
 #review panda exercise from memory
 my_data ="review_Squirrel_Data.csv"

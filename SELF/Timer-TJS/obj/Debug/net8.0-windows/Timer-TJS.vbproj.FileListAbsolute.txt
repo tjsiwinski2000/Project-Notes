@@ -1,0 +1,17 @@
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\bin\Debug\net8.0-windows\Timer-TJS.exe
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\bin\Debug\net8.0-windows\Timer-TJS.deps.json
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\bin\Debug\net8.0-windows\Timer-TJS.runtimeconfig.json
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\bin\Debug\net8.0-windows\Timer-TJS.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\bin\Debug\net8.0-windows\Timer-TJS.pdb
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.AssemblyInfoInputs.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.AssemblyInfo.vb
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.vbproj.CoreCompileInputs.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.sourcelink.json
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\refint\Timer-TJS.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.pdb
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.genruntimeconfig.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\ref\Timer-TJS.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer_TJS.Form1.resources
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-TJS\obj\Debug\net8.0-windows\Timer-TJS.vbproj.GenerateResource.cache

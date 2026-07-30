@@ -1,0 +1,17 @@
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\bin\Debug\net8.0-windows\Timer-RR.exe
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\bin\Debug\net8.0-windows\Timer-RR.deps.json
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\bin\Debug\net8.0-windows\Timer-RR.runtimeconfig.json
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\bin\Debug\net8.0-windows\Timer-RR.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\bin\Debug\net8.0-windows\Timer-RR.pdb
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.vbproj.GenerateResource.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.AssemblyInfoInputs.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.AssemblyInfo.vb
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.vbproj.CoreCompileInputs.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.sourcelink.json
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\refint\Timer-RR.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.pdb
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer-RR.genruntimeconfig.cache
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\ref\Timer-RR.dll
+C:\Users\TJ\source\repos\Project-Notes\SELF\Timer-RR\obj\Debug\net8.0-windows\Timer_RR.Timer_RR_Form1.resources

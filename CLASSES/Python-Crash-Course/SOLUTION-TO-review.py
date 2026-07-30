@@ -1,3 +1,11 @@
+# Write one-liner to return [1, 2, 3, 4, 5, 6, 7, 8, 9]
+nested =[[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+print([num for sublist in nested for num in sublist])
+# Write one line to return second highest num
+my_list = [2, 3, 6, 6, 5]
+s=list(sorted(set(my_list)))[-2]
+print(s)
+
 # Write a one-liner that returns the most frequent element in a list.
 my_list = ['a','b','c','a']
 # note: letter should be key; keys must be unique!

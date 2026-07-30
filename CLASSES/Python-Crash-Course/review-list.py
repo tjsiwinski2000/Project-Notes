@@ -1,3 +1,15 @@
+#07122026
+# Write one-liner to return [1, 2, 3, 4, 5, 6, 7, 8, 9]
+nested =[[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+
+# Write one line to return second highest num
+my_list = [2, 3, 6, 6, 5]
+
+# use zip to return [(1, 'a'), (2, 'b'), (3, 'c')]
+numbers = [1, 2, 3]
+letters = ["a", "b", "c"]
+
+
 #04062026
 # Write a one-liner that returns the most frequent element in a list.
 # Print type(intermediate object)

@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5C97A8-E8E2-4FD9-A4BB-6D1F3F87AFD7}|Timer-TJS.vbproj|c:\\users\\tj\\source\\repos\\project-notes\\self\\timer-tjs\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0B5C97A8-E8E2-4FD9-A4BB-6D1F3F87AFD7}|Timer-TJS.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5C97A8-E8E2-4FD9-A4BB-6D1F3F87AFD7}|Timer-TJS.vbproj|c:\\users\\tj\\source\\repos\\project-notes\\self\\timer-tjs\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0B5C97A8-E8E2-4FD9-A4BB-6D1F3F87AFD7}|Timer-TJS.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5C97A8-E8E2-4FD9-A4BB-6D1F3F87AFD7}|Timer-TJS.vbproj|c:\\users\\tj\\source\\repos\\project-notes\\self\\timer-tjs\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0B5C97A8-E8E2-4FD9-A4BB-6D1F3F87AFD7}|Timer-TJS.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "Form1.Designer.vb",
+              "ToolTip": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\Form1.Designer.vb",
+              "RelativeToolTip": "Form1.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-07-20T16:13:51.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\Form1.vb*",
+              "RelativeToolTip": "Form1.vb*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-07-20T15:58:35.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\TJ\\source\\repos\\Project-Notes\\SELF\\Timer-TJS\\Form1.vb [Design]*",
+              "RelativeToolTip": "Form1.vb [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-07-20T15:55:23.755Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
