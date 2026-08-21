@@ -52,6 +52,8 @@ s="siwinski"
 # return iksniwis 
 # return iiiknssw
 # return siwin
+# return iksniwis with using slice or reverse
+new_s=''
 
 # list comprehension, make a list for squares of odd numbers 1-100
 print("squares of odd numbers 1 - 100")
@@ -73,8 +75,8 @@ players = ['Rafa', 'Roger', 'Joker', 'Murrary']
 
 # dictionary practice reference:01_Basice_Syntax\dictionary_practice_1021-2025b.py
 fruits = {"apple":2, "pear" : 1, "pineaple" : 3, "peach" : 1 , "zebra" : 0 }
-# return fruit with highest key e.g. pineapple 3
-# return fruit with "highest" name  e.g. zebra 
+# return fruit with highest VALUE e.g. pineapple 3
+# return fruit with "highest" KEY  e.g. zebra 
 
 my_list=['zebra','cow','fox','chicken']
 # Make 10 random choices from the above list reference: 01_Basice_Syntax\list_randomization_1022-2025.py
@@ -91,23 +93,24 @@ my_dict ={
     "Abraham" : "golang"
 }
 
- #1.{'TJ': 'python', 'David': 'coffe_talk'}
-print(f"raw dictioinary\n")
+print(f"1.raw dictionary")
 
-#2.sorting a dictionary(Keys)
-print("")
 
-#3.dictionary try,catch
-print("")
+print("#2.sorting a dictionary(Keys)")
 
-#4.list values only (in order of insertion)
-print("Values only in order of insertion:")
 
-#5.list values only (sorted)
-print("Values only sorted:")   
+print('#3.dictionary try,catch')
+
+
+print('#4.list values only (in order of insertion)')
+
+
+print("#5.list values only (sorted)")
+
  
-#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ
-print("Values only in order of sorted keys")   
+print("#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ")
+
+  
 #================================================================
 #================================================================
 

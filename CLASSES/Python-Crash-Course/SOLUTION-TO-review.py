@@ -78,6 +78,10 @@ s="siwinski"
 # return iksniwis and iiiknssw
 print(s[::-1])
 print(''.join(sorted(s)))
+# reverse siwinski -> iksniwis
+new_s = ''
+new_s = ''.join(s[index] for index in range(len(s)-1, -1, -1))
+print(new_s)
 
 # list comprehension, make a list for squares of odd numbers 1-100
 print([num**2 for num in range(1,100,2)])
@@ -124,23 +128,23 @@ my_dict ={
     "Abraham" : "golang"
 }
 
- #1.{'TJ': 'python', 'David': 'coffe_talk'}
+ print(f"1.raw dictionary")
 print(my_dict)
-#2.sorting a dictionary(Keys)
-for key in sorted(my_dict.keys()):
-    print(key)
-#3.dictionary try,catch
-print(my_dict.get('eric love'," bro DNE .."))
-#4.list values only (in order of insertion)
-for value in sorted(my_dict.values()):
-    print(value)
-print('===========\n' *1)
-#5.list values only (sorted)
-    
-print('===========\n' *2)
-#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ
-for key in sorted(my_dict.keys()):
-    print(my_dict[key])
+
+print("#2.sorting a dictionary(Keys)")
+print([key for key in sorted(my_dict.keys())])
+
+print('#3.dictionary try,catch')
+print(my_dict.get('eric love', 'bro dne'))
+
+print('#4.list values only (in order of insertion)')
+print([value for value in (my_dict.values())])
+
+print("#5.list values only (sorted)")
+print([value for value in sorted(my_dict.values())])
+ 
+print("#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ")
+print([my_dict[key] for key in sorted(my_dict)])  
 
 #================================================================
 #================================================================
