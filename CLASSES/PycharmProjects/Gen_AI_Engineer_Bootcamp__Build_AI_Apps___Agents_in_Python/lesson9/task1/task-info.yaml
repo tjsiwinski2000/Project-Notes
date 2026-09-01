@@ -1,0 +1,40 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 724
+        length: 6
+        placeholder_text: openai
+        initial_state:
+          length: 6
+          offset: 724
+        initialized_from_dependency: false
+        encrypted_possible_answer: /2jO/GbzxCFOC4ME0Tsf/A==
+        selected: false
+        status: Unchecked
+      - offset: 816
+        length: 6
+        placeholder_text: Recipe
+        initial_state:
+          length: 6
+          offset: 816
+        initialized_from_dependency: false
+        encrypted_possible_answer: fE/or53C442oKkzwGpAeZw==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

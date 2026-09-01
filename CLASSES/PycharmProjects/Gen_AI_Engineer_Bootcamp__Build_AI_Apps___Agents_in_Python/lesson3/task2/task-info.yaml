@@ -1,0 +1,32 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 911
+        length: 175
+        placeholder_text: "    # TODO: GET https://ipapi.co/json/ with header {'User-agent':\
+      \ 'your-bot 0.1'}, parse response.json() to extract 'city' and 'country_name',\
+      \ then return f\"{city}, {country}\""
+        initial_state:
+          length: 175
+          offset: 911
+        initialized_from_dependency: false
+        encrypted_possible_answer: x0OwQUZeMXhOMiaRLfyuo1Y4QIEAcWndgHYB8JLJqEfLD04VxORWwEJJ8bIq1aErHgQj+KTeKHHnCRjQ7Ht4EhoKI9zmXa7ybKzYNGKlGBP0z3OtM5udxJA75CzOi8A5wF5NmJuaKq4JxSd7LwQ8Pc7l+3TV0tgGQklmXp/mMSjrcjIpTjm+tBUYr3BtIET0Jq7xB0os16jqqdZa9l2GXXqeUS5o2Uq7/Ds7ydfLqBXT0nDPxpoKQh5R19Si7uB3duTU8YtO7zMzBTv8A7lLQr3hz9oPONorrL/3EbXKf/Q=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

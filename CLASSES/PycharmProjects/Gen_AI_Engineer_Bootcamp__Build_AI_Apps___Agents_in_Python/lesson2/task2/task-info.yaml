@@ -1,0 +1,31 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 969
+        length: 105
+        placeholder_text: "# TODO: invoke the agent with user_query as a 'user' message,\
+      \ then print response['messages'][-1].content"
+        initial_state:
+          length: 105
+          offset: 969
+        initialized_from_dependency: false
+        encrypted_possible_answer: KpFWzy3tetgtokuazpMFajSXraAoXqrDXDGhVzPDINBGAm7bAiLryuLsdpbsQLjSKFj2qttuOeDRQSW63nSbk4oXct8rzxryFPRMrxjPg4MPtfMQ9XrdCPEg0GsgtzyQEZ0Icmzmi/WNCL+ntEi9hpWGmdYyLtKVrx5MMvl1zR4=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

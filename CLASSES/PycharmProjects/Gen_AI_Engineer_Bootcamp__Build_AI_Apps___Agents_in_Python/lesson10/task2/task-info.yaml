@@ -1,0 +1,32 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 183
+        length: 299
+        placeholder_text: |2-
+              # TODO: define a system_prompt that asks for a concise summary; init_chat_model("gemini-3-flash-preview", api_key=GEMINI_API_KEY, model_provider="google_genai"); build [{role: system, content: system_prompt}, {role: user, content: text}] as message; return model.invoke(message).content
+              pass
+        initial_state:
+          length: 299
+          offset: 183
+        initialized_from_dependency: false
+        encrypted_possible_answer: qp2C5rwKae13tWS6GXX3ij4snTASIPuz9VffTNrtxw9IQupL4v1B97yF83BwKlu03zf6uRSytixOkry1xtFlkrpRQqk4fyr9RcL8nAFhIndUk26bN197VqMd5svRcfwbTBzasU/WFxOWjgjfUsnyXC6SLcalIv5QvAebh8ntiRNNqpgxJP219mh6CWS6U0NTWsO8GQLJG4Ax+2NttC/Ff60Lqv8Yorg/BkowBFgcknht+nZNF0fCeESBB+l91r6StxWDH6GAkaDIjNxfBOi0OI29DhouwVfJaizWH7VhiQzQSp0/lKX9NTAsx+hhfU1AWbaxapltp2VTO7mnapnAHWYw9VO4S0N4iBojdwIap+1l5KjQJgfz3FqOrDox3jz63V65txurko1RWYUu6e/Kn0osx3p+rvsfvvLMEK36ivszydVotduhFx6gCnb11p5bTOxPPpd1KOkXRjsYQFAc4dgqb2xGkSw5+8PSzrkF19TTm9qsAM0HFGz7TPgmDTvt
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,40 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 434
+        length: 15
+        placeholder_text: WEATHER_API_KEY
+        initial_state:
+          length: 15
+          offset: 434
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2LyknUQT1xEEagyS77/W7ao/AUW2xf9PsaAuUkZOMLg=
+        selected: false
+        status: Unchecked
+      - offset: 636
+        length: 8
+        placeholder_text: imperial
+        initial_state:
+          length: 8
+          offset: 636
+        initialized_from_dependency: false
+        encrypted_possible_answer: xZb7q+FRWhCx/DR8DXbJKg==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

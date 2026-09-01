@@ -1,0 +1,33 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 134
+        length: 252
+        placeholder_text: "    # TODO: append {'role': 'user', 'content': user_input}\
+      \ to history; POST to url with json={'messages': history} and store in response;\
+      \ take response.json()['message'] as assistant_message, append it to history,\
+      \ and print assistant_message['content']"
+        initial_state:
+          length: 252
+          offset: 134
+        initialized_from_dependency: false
+        encrypted_possible_answer: uJ9nwhDdldD9GIenp1m/GtHtJ+Z33QlZnrYzMzyxA/PNf8pfj6e0e/dt0XbYv221excLHHjIsIeBkClqc/z55OmJ9MVbvYK3bWdWEIv+WHiKVWLcIbdgD94vPHimwYp2XWY3JjozIdJ9Gf15BM0hvRA2tXSjUFe3aM3I0j07ygeSbK+k1P1UQMhu2CbeABAnR6eeEuul2T1V9P6Y2v9fbs+mDR9zbRwvS3XD1difqalvsBcMPNoatAIgWhGf17yHvFgYZX5b21NvacYA6Ow/2J8C0LoiVZTN64gNDqrZx/8IJEcgFnPWnclh+hE0zF2dZM6vwgvJRhoQV98sxSzK9Q==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: server.py
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,43 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 657
+        length: 3
+        placeholder_text: 465
+        initial_state:
+          length: 3
+          offset: 657
+        initialized_from_dependency: false
+        encrypted_possible_answer: 5FOOQAkNZs1RuCjDBxBq3w==
+        selected: false
+        status: Unchecked
+      - offset: 1491
+        length: 14
+        placeholder_text: GOOGLE_API_KEY
+        initial_state:
+          length: 14
+          offset: 1491
+        initialized_from_dependency: false
+        encrypted_possible_answer: js/kJtZbgyiU3bDwGnXZ1Q==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: last_row.txt
+    visible: true
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

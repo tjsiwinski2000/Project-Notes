@@ -1,0 +1,28 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 132
+        length: 132
+        placeholder_text: "# TODO: invoke the model with the prompt \"What is machine\
+      \ learning in one sentence?\" and store in response, then print response.text"
+        initial_state:
+          length: 132
+          offset: 132
+        initialized_from_dependency: false
+        encrypted_possible_answer: Nh+yYsrZnlvoiy1lyJcbL9kANBqjb2BEN72BXrO/+cI9dy4HdrgWpyWB30ZwZFK4GfG7qTcuIhwTudbBgNSmPFqrzBpPJeIHpU0fzt4g9oQCp5Kj/ewCDYQ/Z48BRJ0d
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

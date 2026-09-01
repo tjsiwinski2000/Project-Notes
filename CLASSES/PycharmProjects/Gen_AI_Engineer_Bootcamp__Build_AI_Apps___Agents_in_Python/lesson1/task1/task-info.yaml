@@ -1,0 +1,37 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 278
+        length: 22
+        placeholder_text: gemini-1.5-flash
+        initial_state:
+          length: 16
+          offset: 185
+        initialized_from_dependency: false
+        encrypted_possible_answer: tyxKM71H33g1JxyaH5cyKht7nH5ZvyIckFdiHHXw2ic=
+        selected: false
+        status: Unchecked
+      - offset: 474
+        length: 48
+        placeholder_text: "Hello, how are you?"
+        initial_state:
+          length: 19
+          offset: 373
+        initialized_from_dependency: false
+        encrypted_possible_answer: yqjYJnz9wtOdbup8KP2pY/1o4bfe+KgYC6tt3OcuezPFyU8Kp4VFxDVrUFMrfJuzc8fYSgkxazt8EbtOA/Xraw==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

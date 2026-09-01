@@ -1,0 +1,40 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 545
+        length: 16
+        placeholder_text: gemini-1.5-flash
+        initial_state:
+          length: 16
+          offset: 545
+        initialized_from_dependency: false
+        encrypted_possible_answer: tyxKM71H33g1JxyaH5cyKht7nH5ZvyIckFdiHHXw2ic=
+        selected: false
+        status: Unchecked
+      - offset: 995
+        length: 10
+        placeholder_text: session.db
+        initial_state:
+          length: 10
+          offset: 995
+        initialized_from_dependency: false
+        encrypted_possible_answer: lvbzVN69KX0pe01zbDJOvA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

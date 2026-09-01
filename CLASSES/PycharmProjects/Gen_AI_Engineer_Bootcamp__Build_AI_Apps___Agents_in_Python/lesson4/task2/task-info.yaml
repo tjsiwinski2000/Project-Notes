@@ -1,0 +1,32 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 1100
+        length: 220
+        placeholder_text: "    # TODO: write a while True loop that prompts for input(\"\
+      Enter your query: \"), breaks if it is 'bye'/'quit'/'exit', invokes the agent\
+      \ with thread_id=\"1\" in the configurable, and prints response['messages'][-1].content"
+        initial_state:
+          length: 220
+          offset: 1100
+        initialized_from_dependency: false
+        encrypted_possible_answer: IJ1Fu5KvrX9wMM4AnaDxoWaVeMjPbJ3NuN1NyJwP/rbWYgwQqowkQmzdLgNy7mTZpHIMPBoY1gk+ULViq1wYnliXGu7OXvkmb4ks/LvalgWGsVHcAYaonZWyK//ozsTSVhKmSX4AfPsSlVj+ejrqRA+2P9rqJoJYG3E34GnsQVRm7hbsCsFU6QsJYR4ei8RyYuwLtpb8osRL9sleycbOT6yRbJOiaXE1FzjV+Ahb0INE92ZeR5MXzjdgFac/VuLXq90OpA5LHbdJ8gT8sX+XUq21s9GmIw8rV3mIz/ENuCh71xfkCKErIAcV/Njbuj2WxMxqnq0+VcXBZhS1KucyV4AAPljH/qXsp+WVv9wa7gNug9JEkrUc65sMDm4cNjnKAmXcmpgyFWB4/uhJAM27LnslZXfXbn+NMrPSQ/A13l/UNKGHU35/8QRgugNJ70P1xO+1alA+Uu59p/1PpYzVOA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

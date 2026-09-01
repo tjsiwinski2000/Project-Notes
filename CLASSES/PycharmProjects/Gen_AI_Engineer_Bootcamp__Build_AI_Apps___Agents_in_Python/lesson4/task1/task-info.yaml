@@ -1,0 +1,40 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 947
+        length: 9
+        placeholder_text: memory.db
+        initial_state:
+          length: 9
+          offset: 947
+        initialized_from_dependency: false
+        encrypted_possible_answer: lvbzVN69KX0pe01zbDJOvA==
+        selected: false
+        status: Unchecked
+      - offset: 1472
+        length: 3
+        placeholder_text: abc
+        initial_state:
+          length: 3
+          offset: 1472
+        initialized_from_dependency: false
+        encrypted_possible_answer: oa+nVSRiKi7L3SNrfCrSCA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

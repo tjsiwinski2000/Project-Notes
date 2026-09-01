@@ -2,11 +2,9 @@
 # Write one-liner to return [1, 2, 3, 4, 5, 6, 7, 8, 9]
 nested =[[1, 2, 3], [4, 5], [6, 7, 8, 9]]
 print([num for sublist in nested for num in sublist])
-
 # Write one line to return second highest num
 my_list = [2, 3, 6, 6, 5]
 print(list(set(sorted(my_list)))[-2])
-
 # use zip to return [(1, 'a'), (2, 'b'), (3, 'c')]
 numbers = [1, 2, 3]
 letters = ["a", "b", "c"]
@@ -18,7 +16,6 @@ print(list(zip(numbers,letters)))
 # Print type(intermediate object)
 my_list = ['a','b','c','a']
 print(max(my_list,key=my_list.count))
-
 # #JSON 
 # 1) output raw content from review_data.json in format below
 # key: amazon e-mail: tjsiwinski_2000@yahoo.com
@@ -29,15 +26,14 @@ print(max(my_list,key=my_list.count))
 # HINT must either LOAD or DUMP json to get it into a variable.
 json_file_name = 'review_data.json'
 import json
-# with open(json_file_name,mode='r') as f1:
+# with open(json_file_name, mode='r') as f1:
 #     my_dict=json.load(f1)
+
+# my_dict[ '777'] =  {'name': 'Eli', 'role': 'Developer', 'salary': 88000}
 # print(my_dict)
-# print('#' * 40)
-# my_dict["888"]={"name": "BAlice", "role": "Engineer", "salary": 95000}
-# print(my_dict)
-# print('#' * 40)
-with open(json_file_name, mode='w') as f2:
-    json.dump(my_dict,f2)
+
+# with open(json_file_name, mode='w') as f2:
+#     json.dump(my_dict,f2)
 # given p11 exercise 06-11
 cities_dict ={
     "San Diego": {
@@ -56,21 +52,34 @@ cities_dict ={
         "fact": "Art Institue is awesome"
     }
 }
-#================================================================
-string = "abracadabra"
-# print 5th character in the string
-# change 5th character from a to k using slice
+# for city,city_info in cities_dict.items():
+#     print(f'CITY:{city}\tCOUNTRY:{city_info['country']}\tPOPUATION:{city_info['population']}')
+# #================================================================
+# string = "abracadabra"
+# # print 5th character in the string
+# print(string[4:5])
+# # change 5th character from a to k using slice
+# print(string)
+# string = string[:4] +'k' + string[5:]
+# print(string)
 
-s="siwinski"
-# return iksniwis 
-# return iiiknssw
-# return siwin
-# return iksniwis with using slice or reverse
-new_s=''
+# s="siwinski"
+# print(' return iksniwis') 
+# print(s[::-1])
+# # return iiiknssw
+# print(''.join(sorted(s)))
+# # return siwin
+# print(s[:5])
+# # return iksniwis with using slice or reverse
+# new_s=''
+# for index in range(len(s)-1,-1,-1):
+#     print(s[index])
+#     new_s +=s[index]
+# print(new_s)
 
 # list comprehension, make a list for squares of odd numbers 1-100
 print("squares of odd numbers 1 - 100")
-print("")
+print([num**2 for num in range(1,100,2)])
 
 #list practice reference: 01_Basice_Syntax\list_exercise_1014-2025.py
 #1014-2025 python practice TJS - Python Crash Course

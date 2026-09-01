@@ -1,0 +1,24 @@
+type: marketplace
+title: "Gen AI Engineer Bootcamp: Build AI Apps & Agents in Python"
+language: English
+summary: |
+  <p>The companion to the Udemy course: Gen AI Engineer Bootcamp: Build AI Apps &amp; Agents in Python.<br>Link to the Udemy course: <a href="https://www.udemy.com/course/ai-developer-bootcamp/">https://www.udemy.com/course/ai-developer-bootcamp/</a></p>
+programming_language: Python
+environment: unittest
+content:
+  - lesson0
+  - lesson1
+  - lesson2
+  - lesson3
+  - lesson4
+  - lesson5
+  - lesson6
+  - lesson7
+  - lesson8
+  - lesson9
+  - lesson10
+additional_files:
+  - name: requirements.txt
+mode: Study
+feedback_link: https://plugins.jetbrains.com/plugin/32260-gen-ai-engineer-bootcamp-build-ai-apps--agents-in-python/reviews
+yaml_version: 5

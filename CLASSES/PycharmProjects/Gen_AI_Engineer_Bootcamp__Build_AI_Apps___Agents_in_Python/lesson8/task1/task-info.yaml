@@ -1,0 +1,37 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 242
+        length: 4
+        placeholder_text: /ask
+        initial_state:
+          length: 4
+          offset: 242
+        initialized_from_dependency: false
+        encrypted_possible_answer: LpA3OYIXpqptMU1PHVPDTg==
+        selected: false
+        status: Unchecked
+      - offset: 563
+        length: 4
+        placeholder_text: 5001
+        initial_state:
+          length: 4
+          offset: 563
+        initialized_from_dependency: false
+        encrypted_possible_answer: xn2BWYtFddIrpQYJ6julvw==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

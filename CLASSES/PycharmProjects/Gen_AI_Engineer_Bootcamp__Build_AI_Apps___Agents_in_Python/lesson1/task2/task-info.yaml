@@ -1,0 +1,40 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 227
+        length: 8
+        placeholder_text: wood.txt
+        initial_state:
+          length: 8
+          offset: 227
+        initialized_from_dependency: false
+        encrypted_possible_answer: blJ2dpcyfJIaOzvitdxCKw==
+        selected: false
+        status: Unchecked
+      - offset: 293
+        length: 13
+        placeholder_text: Tell me about
+        initial_state:
+          length: 13
+          offset: 293
+        initialized_from_dependency: false
+        encrypted_possible_answer: 5e4HsriVJ/TcWzgK/KNinEwy8hKR9Xy9rvXALIkPMB8TADDH2PsPRxv+3upAp1N/
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: coffee.txt
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

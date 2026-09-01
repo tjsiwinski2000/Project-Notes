@@ -1,0 +1,36 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 670
+        length: 244
+        placeholder_text: "    # TODO: invoke agent with user_message and thread_id=session['thread_id'];\
+      \ append {'type': 'human', 'content': user_message} and {'type': 'ai', 'content':\
+      \ response['messages'][-1].content} to session['messages']; set session.modified\
+      \ = True"
+        initial_state:
+          length: 244
+          offset: 670
+        initialized_from_dependency: false
+        encrypted_possible_answer: MeH+JIomAg9PtEVhrzdjVsqXZftRyU9pWU9izyJLhWnO7/7miSldBKz2xv/Ae40eLZMb1C8fvL+eonoMX9c2vbcSsdKyFEw7DJeU5CglDdkeVPtgQyrSe7AeAnJ8Hm40/Kri6WyN+uM1Crr2kIcNVU8mdn89fvRcDd4z8n9TiJSL+RZS/HYb0mq97KV8Jo9sYGhgbPZCGofeKXp1JEBVLBrr40FNRA6yBuAnEAdXQMwxpY5KYZaZDRrlOBSuvleaA8e3225/R9lBQAZuNcRnFrVHUTrlvv7gjkIJfVCS2J08tmI9ZRlEhZNqripnDiNU1+Jcv0DcRGSH8p9YLw84fYqP8idLj5hXJytiXuYt2xc2rXhw8OZE/JizEfbEMqS/eaC4HnT76PuqnREFRmcXGFp0r/txM+jpTKoUXzPsbBDwAjZZ6XeISqS5f/a3xCprE9HLPsbQHV4qiMi/cxHvGwlWlrPTXLwjVygQXsjzRV4=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: agent.py
+    visible: true
+    learner_created: false
+  - name: .env
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
