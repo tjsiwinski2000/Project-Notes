@@ -89,20 +89,26 @@ cant_make="Abraham Lincoln"
 first_alternate="Rafael Nadal"
 # remove cant_make , add first_alternate @end,  add first_alternate in middle
 
-
+my_list.remove(cant_make)
+my_list.insert(int(len(my_list))//2 ,first_alternate)
 
 # slicing a list reference:01_Basice_Syntax\ist_slicing_1017-2025.py
 players = ['Rafa', 'Roger', 'Joker', 'Murrary']
 # print out Roger, Joker only
+print(players[1:3])
+
 
 # dictionary practice reference:01_Basice_Syntax\dictionary_practice_1021-2025b.py
 fruits = {"apple":2, "pear" : 1, "pineaple" : 3, "peach" : 1 , "zebra" : 0 }
 # return fruit with highest VALUE e.g. pineapple 3
+# print(max(fruits))
 # return fruit with "highest" KEY  e.g. zebra 
-
+# print(max(fruits,key=fruits.get))
 my_list=['zebra','cow','fox','chicken']
 # Make 10 random choices from the above list reference: 01_Basice_Syntax\list_randomization_1022-2025.py
-
+# import random
+# for count in range(1,11):
+#     print(f'{count}. {random.choice(my_list)}')
 
 #Dictionary Comprehension reference: 01_Basice_Syntax\dict_comprehension_1104-2025b.py
 sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
@@ -115,24 +121,26 @@ my_dict ={
     "Abraham" : "golang"
 }
 
-print(f"1.raw dictionary")
+# print(f"1.raw dictionary")
+# print(my_dict.items())
+
+# print("#2.sorting a dictionary(Keys)")
+# print(sorted(my_dict.items()))
+
+# print('#3.dictionary try,catch')
+# print(my_dict.get('eric love','bro dne'))
 
 
-print("#2.sorting a dictionary(Keys)")
+# print('#4.list values only (in order of insertion)')
+# print((my_dict.values()))
 
 
-print('#3.dictionary try,catch')
-
-
-print('#4.list values only (in order of insertion)')
-
-
-print("#5.list values only (sorted)")
-
+# print("#5.list values only (sorted)")
+# print(sorted(my_dict.values()))
  
-print("#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ")
-
-  
+# print("#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ")
+# for key in sorted(my_dict.keys()):
+#     print(f'JaiHo {my_dict.get(key)}')  
 #================================================================
 #================================================================
 
@@ -140,6 +148,8 @@ print("#6.list values only but in order of [sorted keys] e.g. Abraham, David, TJ
 
 #================================================================
 #================================================================
+import os
+import requests
 NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
 NEWS_URL = "https://newsapi.org/v2/everything"
 
@@ -148,14 +158,18 @@ parameters = {
     "apikey" : NEWS_API_KEY
 }
 
-response = requests.get(url=NEWS_URL, params=parameters)
-response.raise_for_status()
-# assign data variable the contents of the "article" key 
+# response = requests.get(url=NEWS_URL, params=parameters)
+# response.raise_for_status()
+# # assign data variable the contents of the "article" key 
+# data = response.json()['articles']
 
-# print the first three articles
+# # print the first three articles
 
-#print  article author, title , url for first three articles
 
+# #print  article author, title , url for first three articles
+# for article in data[:3]:
+#     print(f'AUTHOR: {article['author']}\n\tTITLE: {article['title']}')
+    
 #================================================================
 #================================================================
 # practice review , open file1,file2, create list of numbers in both, create list of numbers in 1, but not 2
@@ -166,6 +180,17 @@ list3 = []
 list4 = []
 file_name1 = "review_ex_nums1.txt"
 file_name2 = "review_ex_nums2.txt"
+
+with open(file_name1, mode='r') as f1:
+    for item in f1:
+        list1.append(int(item.replace('\n','')))
+
+with open(file_name2, mode='r') as f2:
+    for item in f2:
+        list2.append(int(item.replace('\n','')))
+
+# print(f'in both {file_name1} and {file_name2}\n\t{[num for num in list1 if num in list2]}')
+# print(f'in list 1 but not 2 {file_name1} and {file_name2}\n\t{[num for num in list1 if num not in list2]}')
 #================================================================
 #================================================================
 ##pg162 Crash Course => complete the class method to show all attributes dynamically
@@ -179,7 +204,8 @@ class User:
     
     def describe_user(self):
         #print all attributes of user to screen 1130-2025-learning.py if stuck
-        pass
+        for key, value in self.__dict__.items():
+            print(f'KEY:{key}\nVALUE:{value}')
         
 
 test_user = User("TJ", "Siwinski", "00001", "male", "freshman")
@@ -203,10 +229,21 @@ sent_messages=[]
 #================================================================
 #review panda exercise from memory
 my_data ="review_Squirrel_Data.csv"
+import pandas
 
-gray = "Primary Fur Color" == "Gray"
-black = "Primary Fur Color" == "Black"
-red = "Primary Fur Color" == "Cinnamon"
+my_DataFrame= pandas.read_csv(my_data)
+
+
+
+gray = len(my_DataFrame[my_DataFrame["Primary Fur Color"] == "Gray"])
+black = len(my_DataFrame[my_DataFrame[ "Primary Fur Color"] == "Black"])
+red = len(my_DataFrame[my_DataFrame["Primary Fur Color"] == "Cinnamon"])
+
+my_dict={
+    "colors" : ['gray','black','red'],
+    "count" : [gray,black,red]
+    
+}
 
 #================================================================
 #================================================================

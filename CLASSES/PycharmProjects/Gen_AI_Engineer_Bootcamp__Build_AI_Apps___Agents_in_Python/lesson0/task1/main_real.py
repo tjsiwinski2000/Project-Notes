@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 #
 from langchain.agents import create_agent
 import os
+import requests
 
 # from lesson2.task1.task import get_location
 
@@ -23,11 +24,24 @@ GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 # load_dotenv()
 def get_weather(city:str):
     """Get Weather for a given city"""
-    return {'conidition': 'sunny', 'temperature' : 25}
+    api_key = os.environ.get('WEATHER_API_KEY')
+    base_url= "http://api.openweathermap.org/data/2.5/weather"
+    params = {
+        "q" : city,
+        "appid" : api_key,
+        'units' :'metric'
+    }
+    response = requests.get(base_url, params=params)
+    data = response.json()
+    return data
 
 def get_location():
     """Get user's location. Use this when the user asks about the weather without specifying a city"""
-    return "Rome, Italy"
+    response = requests.get("https://ipapi.co/json/", headers = {'User-agent': 'your-bot 0.1'})
+    data = response.json()
+    city = data['city']
+    country = data.get('country_name')
+    return f"{city}, {country}"
 
 llm = ChatGoogleGenerativeAI(
     model = 'gemini-flash-lite-latest',
@@ -53,8 +67,10 @@ agent = create_agent(
     system_prompt=system_prompt
 )
 #
-# response1 = llm.invoke("How is the weather in Rome?")
-response1 = agent.invoke(
-    {"messages": ({'role': 'user',
-                   'content':'How is the weather '})})
-print(response1['messages'][-1].content)
+if __name__ == "__main__":
+    user_query = input("Enter your query: ")
+    # response1 = llm.invoke("How is the weather in Rome?")
+    response1 = agent.invoke(
+        {"messages": ({'role': 'user',
+                       'content': user_query})})
+    print(response1['messages'][-1].content)

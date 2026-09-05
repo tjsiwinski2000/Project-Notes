@@ -4,6 +4,9 @@ files:
   - name: main.py
     visible: true
     learner_created: false
+  - name: main_real.py
+    visible: true
+    learner_created: true
 status: Solved
 record: -1
 post_submission_on_open: true
