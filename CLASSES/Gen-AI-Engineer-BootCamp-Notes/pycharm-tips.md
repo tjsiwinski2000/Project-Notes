@@ -21,24 +21,23 @@ GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 
 
 ### working with console ###
-console change working directory
-os.chdir(r"C:\..\Gen_AI_Engineer_..\lesson0\task1")
-os.cwd()
-os.listdir()
+console change working directory <br>
+os.chdir(r"C:\..\Gen_AI_Engineer_..\lesson0\task1") <br>
+os.cwd() <br>
+os.listdir() <br>
 ['main.py', 'main_real.py', 'task-info.yaml', 'task-remote-info.yaml', 'task.md']
-
-import sys
-sys.path.append('.')
-- above needed to find main_real, despite navigating to its location
-import main_real
+import sys <br>
+sys.path.append('.') <br>
+ *above needed to find main_real, despite navigating to its location*
+RESULT: import main_real now works <br>
 
 ### working with console STOP CACHING ###
 import main_real
-- has to be done every time you edit main_real
-- testing at console level
-HOW TO STOP caching which is a common problem
-import importlib
-import main_real
+-has to be done every time you edit main_real <br>
+-testing at console level <br>
+HOW TO STOP caching which is a common problem<br>
+import importlib <br>
+import main_real <br>
 importlib.reload(main_real)
 
 ### settings ###
