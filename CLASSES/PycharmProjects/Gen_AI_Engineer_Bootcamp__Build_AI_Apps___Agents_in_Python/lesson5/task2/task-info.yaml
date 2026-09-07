@@ -3,8 +3,8 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 1395
-        length: 150
+      - offset: 0
+        length: 2401
         placeholder_text: "        # TODO: loop over response['messages']; print 'You:\
       \ ' + content for human messages, 'Agent: ' + content for ai messages with non-empty\
       \ content"
@@ -13,7 +13,7 @@ files:
           offset: 1395
         initialized_from_dependency: false
         encrypted_possible_answer: +EhfXT90CzOzXWGwKkM5TbRXlTOF06o4t0YAUphdYFnk2085zClyTxFvfbqczJFAtjhFx6L+G/q4ljzEfc4n+KUjr2NF01XLadlEwsJle3QcKhmajHUCysJWCb22C4ts9Pnehd7ElxW7foSHMQOOQZyxgqcvI+Yfl9toImtZBQBGdq4L0AoVpMqBGJs3Da+tlG7XvTEPgHekmcdMQgfknHxvqWWfGc7ikrAhLiYCVJ17+TCSYXunyDAAA+ARDDomf5tnceJnD7bUQEnJkfMMwA==
-        selected: false
+        selected: true
         status: Unchecked
     learner_created: false
   - name: .env
@@ -28,5 +28,8 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
+  - name: TJS-task.py
+    visible: true
+    learner_created: true
 status: Unchecked
 record: -1

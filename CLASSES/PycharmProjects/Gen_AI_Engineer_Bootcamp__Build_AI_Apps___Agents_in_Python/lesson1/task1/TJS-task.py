@@ -1,4 +1,6 @@
-import os
+# 0907-2026 - reviewed 8:20am
+# This is working w/o issue.
+# Simple interaction with LLM
 
 from langchain.chat_models import init_chat_model
 # from os import environ

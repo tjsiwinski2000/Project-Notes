@@ -3,7 +3,7 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 227
+      - offset: 285
         length: 8
         placeholder_text: wood.txt
         initial_state:
@@ -13,7 +13,7 @@ files:
         encrypted_possible_answer: blJ2dpcyfJIaOzvitdxCKw==
         selected: false
         status: Unchecked
-      - offset: 293
+      - offset: 351
         length: 13
         placeholder_text: Tell me about
         initial_state:

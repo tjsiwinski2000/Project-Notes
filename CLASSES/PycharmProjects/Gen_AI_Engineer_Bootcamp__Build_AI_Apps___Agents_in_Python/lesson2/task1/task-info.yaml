@@ -1,10 +1,10 @@
 type: edu
 files:
-  - name: task.py
+  - name: TJS-task.py
     visible: true
     placeholders:
-      - offset: 516
-        length: 16
+      - offset: 711
+        length: 24
         placeholder_text: gemini-1.5-flash
         initial_state:
           length: 16
@@ -13,7 +13,7 @@ files:
         encrypted_possible_answer: tyxKM71H33g1JxyaH5cyKht7nH5ZvyIckFdiHHXw2ic=
         selected: false
         status: Unchecked
-      - offset: 551
+      - offset: 754
         length: 3
         placeholder_text: 0.3
         initial_state:

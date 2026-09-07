@@ -1,9 +1,9 @@
 type: edu
 files:
-  - name: task.py
+  - name: TJS-task.py
     visible: true
     placeholders:
-      - offset: 434
+      - offset: 598
         length: 15
         placeholder_text: WEATHER_API_KEY
         initial_state:
@@ -13,7 +13,7 @@ files:
         encrypted_possible_answer: 2LyknUQT1xEEagyS77/W7ao/AUW2xf9PsaAuUkZOMLg=
         selected: false
         status: Unchecked
-      - offset: 636
+      - offset: 800
         length: 8
         placeholder_text: imperial
         initial_state:

@@ -2,6 +2,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langgraph.checkpoint.sqlite import SqliteSaver
+import requests
 
 load_dotenv()
 
@@ -10,7 +11,7 @@ def get_weather(city: str):
     """Get weather for a given city.
     Return the temperature_fahrenheit value in Fahrenheit label for locations such as US, Liberia, Burma"""
     # TODO: Change "WEATHER_API_KEY" to "OPENWEATHER_API_KEY"
-    api_key = os.getenv("WEATHER_API_KEY")
+    api_key = "OPENWEATHER_API_KEY"
     base_url = "http://api.openweathermap.org/data/2.5/weather"
     # TODO: Change 'imperial' to 'metric'
     params = {
@@ -35,7 +36,7 @@ def get_location():
 
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini-3-flash-preview",
+    model="gemini-flash-lite-latest",
     temperature=0.7,
 )
 
@@ -68,4 +69,5 @@ with SqliteSaver.from_conn_string('checkpoints.db') as checkpointer:
 
         # TODO: loop over response['messages']; print 'You: ' + content for human messages, 'Agent: ' + content for ai messages with non-empty content
 
-        print(response['messages'][-1].content)
+        #print(response['messages'][-1].content)
+        print(response['messages'])

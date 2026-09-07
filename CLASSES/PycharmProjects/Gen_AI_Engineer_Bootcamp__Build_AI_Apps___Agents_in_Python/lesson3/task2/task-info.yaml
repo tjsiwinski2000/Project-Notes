@@ -1,10 +1,10 @@
 type: edu
 files:
-  - name: task.py
+  - name: TJS-task.py
     visible: true
     placeholders:
       - offset: 911
-        length: 175
+        length: 297
         placeholder_text: "    # TODO: GET https://ipapi.co/json/ with header {'User-agent':\
       \ 'your-bot 0.1'}, parse response.json() to extract 'city' and 'country_name',\
       \ then return f\"{city}, {country}\""

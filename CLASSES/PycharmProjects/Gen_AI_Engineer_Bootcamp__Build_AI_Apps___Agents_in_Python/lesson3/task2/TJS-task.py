@@ -26,7 +26,12 @@ def get_weather(city: str):
 
 def get_location():
     """Get user's current location. Use this when the user asks about weather."""
-    # TODO: GET https://ipapi.co/json/ with header {'User-agent': 'your-bot 0.1'}, parse response.json() to extract 'city' and 'country_name', then return f"{city}, {country}"
+    """Get user's current location. Use this when the user asks about weather."""
+    response = requests.get("https://ipapi.co/json/", headers={'User-agent': 'your-bot 0.1'})
+    data = response.json()
+    city = data['city']
+    country = data.get('country_name')
+    return f"{city}, {country}"
 
 
 llm = ChatGoogleGenerativeAI(

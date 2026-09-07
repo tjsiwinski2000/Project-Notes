@@ -1,3 +1,8 @@
+# 0907-2026 - reviewed  9:30am
+# This is working w/o issue.
+# Simple agent, getting location if not provided and local weather.
+# NOTE: F for US C everywhere else
+
 import requests
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI

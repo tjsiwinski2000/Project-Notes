@@ -15,7 +15,7 @@ for m in client.models.list():
         print(m.name)
 ```
 		
-#### result ####
+#### MODEL OPTIONs ####
 - models/gemini-flash-lite-latest
 - models/gemini-2.5-flash-lite
 - models/gemini-3.1-flash-lite-preview
@@ -43,6 +43,7 @@ response1 = agent.invoke(
 print(response1['messages'][-1].content)
 ```
 
+### WORK FLOW ###
 When you invoke this
 - query is first sent to the LLM.
 - LLM gets the query, and then it decides what function to run.
@@ -53,15 +54,5 @@ When you invoke this
 - Now this is known as the *REACT*, which means reasoning.
 So there is a reasoning part where the LLM tries to find out what function it has to call based on the function doc strings.
 
-### pycharm tip ###
-console change working directory
-os.chdir(r"C:\..\Gen_AI_Engineer_..\lesson0\task1")
-os.cwd()
-os.listdir()
-['main.py', 'main_real.py', 'task-info.yaml', 'task-remote-info.yaml', 'task.md']
 
-import sys
-sys.path.append('.')
-- above needed
-import main_real
 

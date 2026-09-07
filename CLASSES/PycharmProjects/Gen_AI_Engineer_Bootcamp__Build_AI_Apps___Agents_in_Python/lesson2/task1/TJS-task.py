@@ -1,7 +1,16 @@
+# 0907-2026 - reviewed 8:20am
+# This is working w/o issue.
+# INTRODUCTION to Agents
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 
+# import os
+# GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY"
+# GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
+
+# load env. variables
 load_dotenv()
 
 
@@ -15,9 +24,9 @@ def get_location():
     return "Rome, Italy"
 
 
-# TODO: Change the model to "gemini-3-flash-preview" and temperature to 0.7
+# NOTE : reads google API key automatically via load_dotenv()
 llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash",
+    model="gemini-flash-lite-latest",
     temperature=0.3,
 )
 
