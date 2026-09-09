@@ -36,7 +36,7 @@ Details:
 Password contains special characters
 - percent-encode them in the connection string.
 
-postgresql://postgres.ipxasoyjgndlogkplfsi:AIfofoo%401965@aws-0-us-east-1.pooler.supabase.com:6543/postgres
+postgresql://postgres.ipxasoyjgndlogkplfsi:[password]@aws-0-us-east-1.pooler.supabase.com:6543/postgres
 
 Supabase
 - defaults to ipV6
