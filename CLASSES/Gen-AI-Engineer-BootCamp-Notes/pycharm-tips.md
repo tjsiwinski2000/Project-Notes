@@ -21,6 +21,7 @@ GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 
 
 ### working with console ###
+import os
 console change working directory <br>
 os.chdir(r"C:\..\Gen_AI_Engineer_..\lesson0\task1") <br>
 os.cwd() <br>

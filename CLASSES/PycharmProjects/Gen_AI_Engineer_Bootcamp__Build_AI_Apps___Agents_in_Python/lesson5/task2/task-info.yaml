@@ -28,7 +28,22 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
-  - name: TJS-task.py
+  - name: TJS_task.py
+    visible: true
+    learner_created: true
+  - name: 0908_test.py
+    visible: true
+    learner_created: true
+  - name: checkpoints2.db
+    visible: true
+    learner_created: true
+  - name: checkpoints2.db-shm
+    visible: true
+    learner_created: true
+  - name: checkpoints2.db-wal
+    visible: true
+    learner_created: true
+  - name: TJS_task_supabase.py
     visible: true
     learner_created: true
 status: Unchecked

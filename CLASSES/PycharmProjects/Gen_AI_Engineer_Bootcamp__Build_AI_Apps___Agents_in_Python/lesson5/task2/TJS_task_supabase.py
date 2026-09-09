@@ -1,17 +1,19 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langgraph.checkpoint.sqlite import SqliteSaver
+from langgraph.checkpoint.postgres import PostgresSaver
 import requests
-
+import os
 load_dotenv()
 
+DB_URI = "postgresql://postgres.ipxasoyjgndlogkplfsi:AIfofoo%401965@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
 
 def get_weather(city: str):
     """Get weather for a given city.
     Return the temperature_fahrenheit value in Fahrenheit label for locations such as US, Liberia, Burma"""
     # TODO: Change "WEATHER_API_KEY" to "OPENWEATHER_API_KEY"
-    api_key = "OPENWEATHER_API_KEY"
+    api_key = os.environ.get("WEATHER_API_KEY")
+    # print(api_key)
     base_url = "http://api.openweathermap.org/data/2.5/weather"
     # TODO: Change 'imperial' to 'metric'
     params = {
@@ -23,7 +25,8 @@ def get_weather(city: str):
     data = response.json()
     temperature_celsius = data['main']['temp']
     temperature_fahrenheit = temperature_celsius * 9 / 5 + 32
-    return data, {'temperature_fahrenheit': temperature_fahrenheit}
+    # return data, {'temperature_fahrenheit': temperature_fahrenheit}
+    return data
 
 
 def get_location():
@@ -50,7 +53,8 @@ YOUR WORKFLOW:
 2. If the user provides a city, call get_weather(city) directly.
 """
 
-with SqliteSaver.from_conn_string('checkpoints.db') as checkpointer:
+with PostgresSaver.from_conn_string(DB_URI) as checkpointer:
+    checkpointer.setup()
     agent = create_agent(
         model=llm,
         tools=[get_weather, get_location],
@@ -60,7 +64,7 @@ with SqliteSaver.from_conn_string('checkpoints.db') as checkpointer:
 
     while True:
         user_query = input("Enter your query: ")
-        if user_query in ['bye', 'quit', 'exit']:
+        if user_query.strip() in ['bye', 'quit', 'exit']:
             break
         response = agent.invoke(
             {"messages": [{'role': 'user', 'content': user_query}]},
@@ -70,4 +74,10 @@ with SqliteSaver.from_conn_string('checkpoints.db') as checkpointer:
         # TODO: loop over response['messages']; print 'You: ' + content for human messages, 'Agent: ' + content for ai messages with non-empty content
 
         #print(response['messages'][-1].content)
-        print(response['messages'])
+        # for i in response['messages']:
+        #     if i.type == 'human':
+        #         print("You ", i.content)
+        #     if i.type == 'ai' and i.content:
+        #         print("Agent: ", i.content)
+
+        print(response['messages'][-1].content)
